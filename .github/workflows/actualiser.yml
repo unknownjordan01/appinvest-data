@@ -1,0 +1,28 @@
+name: Actualiser AppInvest
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 23 * * 1-5'
+      timezone: Europe/Paris
+permissions:
+  contents: write
+concurrency:
+  group: appinvest-data-publisher
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collecter les communiques officiels
+        run: python3 collect_news.py
+      - name: Publier donnees et bilan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add biotech-data.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualisation des communiques et bilan de collecte"
+            git push
+          fi
