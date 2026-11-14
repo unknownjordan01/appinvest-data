@@ -1,0 +1,1355 @@
+{
+  "version": "2026-11-14.1",
+  "asOf": "2026-11-14",
+  "sources": {
+    "t-fin": {
+      "id": "t-fin",
+      "title": "Tiziana — comptes semestriels et point de trésorerie",
+      "url": "https://www.sec.gov/Archives/edgar/data/1723069/000121390026110270/ea030885001ex99-1.htm",
+      "date": "2026-10-16",
+      "kind": "Dépôt SEC de la société"
+    },
+    "t-ms": {
+      "id": "t-ms",
+      "title": "Tiziana — topline INFORM-MS",
+      "url": "https://ir.tizianalifesciences.com/news-releases/news-release-details/tiziana-announces-positive-topline-results-phase-2a-inform-ms",
+      "date": "2026-11-02",
+      "kind": "Communiqué officiel"
+    },
+    "t-conf": {
+      "id": "t-conf",
+      "title": "Tiziana — présentation Jefferies",
+      "url": "https://ir.tizianalifesciences.com/news-releases/news-release-details/tiziana-life-sciences-present-jefferies-global-healthcare-1/",
+      "date": "2026-11-12",
+      "kind": "Communiqué officiel"
+    },
+    "t-reg": {
+      "id": "t-reg",
+      "title": "INFORM-MS — NCT06292923",
+      "url": "https://clinicaltrials.gov/study/NCT06292923",
+      "date": "2026-11-12",
+      "kind": "Registre — dernière mise à jour"
+    },
+    "p-q3": {
+      "id": "p-q3",
+      "title": "ProQR — résultats T3 2026",
+      "url": "https://www.proqr.com/press-releases/proqr-announces-third-quarter-2026-operating-and-financial-results",
+      "date": "2026-11-12",
+      "kind": "Communiqué officiel"
+    },
+    "b-q3": {
+      "id": "b-q3",
+      "title": "BioCryst — résultats T3 2026",
+      "url": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-reports-third-quarter-2026-financial-results",
+      "date": "2026-11-04",
+      "kind": "Communiqué officiel"
+    },
+    "b-reg": {
+      "id": "b-reg",
+      "title": "ALPHA-ORBIT — NCT06842823",
+      "url": "https://clinicaltrials.gov/study/NCT06842823",
+      "date": "2026-06-30",
+      "kind": "Registre — dernière mise à jour"
+    },
+    "v-h1": {
+      "id": "v-h1",
+      "title": "Valneva — résultats S1 2026",
+      "url": "https://valneva.com/press-release/valneva-reports-half-year-2026-financial-results-and-provides-corporate-updates/",
+      "date": "2026-08-13",
+      "kind": "Communiqué officiel"
+    },
+    "v-ema": {
+      "id": "v-ema",
+      "title": "Valneva/Pfizer — recevabilité du dossier Lyme",
+      "url": "https://valneva.com/press-release/pfizer-and-valnevas-lyme-disease-vaccine-candidate-marketing-authorization-application-validated-by-european-medicines-agency/",
+      "date": "2026-08-14",
+      "kind": "Communiqué officiel"
+    },
+    "v-cal": {
+      "id": "v-cal",
+      "title": "Valneva — publication financière annoncée",
+      "url": "https://valneva.com/press-release/valneva-to-report-nine-month-2026-consolidated-financial-results-on-november-24-2026/",
+      "date": "2026-11-04",
+      "kind": "Communiqué officiel"
+    },
+    "v-shig": {
+      "id": "v-shig",
+      "title": "Valneva — données S4V2",
+      "url": "https://valneva.com/press-release/valneva-announces-positive-phase-2-results-for-tetravalent-shigella-vaccine-candidate-s4v2/",
+      "date": "2026-11-09",
+      "kind": "Communiqué officiel"
+    },
+    "v-us": {
+      "id": "v-us",
+      "title": "Valneva — retrait américain IXCHIQ",
+      "url": "https://valneva.com/press-release/valneva-provides-update-on-chikungunya-vaccine-ixchiq/",
+      "date": "2026-01-19",
+      "kind": "Communiqué officiel"
+    },
+    "v-pipe": {
+      "id": "v-pipe",
+      "title": "Valneva — pipeline",
+      "url": "https://valneva.com/research-development/",
+      "date": "",
+      "kind": "Page officielle non datée"
+    },
+    "m-h1": {
+      "id": "m-h1",
+      "title": "MaaT Pharma — résultats S1 2026",
+      "url": "https://www.maatpharma.com/september-29-2026-maat-pharma-publishes-its-half-year-2026-results-and-provides-a-business-update/",
+      "date": "2026-09-29",
+      "kind": "Communiqué officiel"
+    },
+    "m-ema": {
+      "id": "m-ema",
+      "title": "EMA — refus Xervyteg après réexamen",
+      "url": "https://www.ema.europa.eu/fr/medicines/human/EPAR/xervyteg",
+      "date": "",
+      "kind": "Autorité — avis du 17 septembre 2026"
+    },
+    "m-plan": {
+      "id": "m-plan",
+      "title": "MaaT Pharma — suite du développement après réexamen",
+      "url": "https://www.maatpharma.com/september-18-2026-maat-pharma-provides-update-on-maat013-xervyteg-potential-development-plan-following-chmp-negative-opinion-after-re-examination/",
+      "date": "2026-09-18",
+      "kind": "Communiqué officiel"
+    },
+    "m-pic": {
+      "id": "m-pic",
+      "title": "MaaT Pharma — premières données PICASSO",
+      "url": "https://www.maatpharma.com/november-6-2026-maat-pharma-provides-an-update-on-preliminary-findings-from-the-investigator-sponsored-phase-2a-picasso-trial-in-metastatic-melanoma/",
+      "date": "2026-11-06",
+      "kind": "Communiqué officiel"
+    },
+    "m-pre": {
+      "id": "m-pre",
+      "title": "MaaT Pharma — retour pré-IND MaaT034",
+      "url": "https://www.maatpharma.com/october-19-2026-maat-pharma-receives-fda-feedback-following-pre-ind-meeting-supporting-continued-development-of-maat034-in-solid-tumors/",
+      "date": "2026-10-19",
+      "kind": "Communiqué officiel"
+    },
+    "c-q3": {
+      "id": "c-q3",
+      "title": "Capricor — résultats T3 2026",
+      "url": "https://www.capricor.com/investors/news-events/press-releases/detail/359/capricor-therapeutics-reports-third-quarter-2026-financial",
+      "date": "2026-11-10",
+      "kind": "Communiqué officiel"
+    },
+    "c-delay": {
+      "id": "c-delay",
+      "title": "Capricor — report de la date cible PDUFA",
+      "url": "https://www.capricor.com/investors/sec-filings/all-sec-filings/content/0001104659-26-100071/capr-20260824xex99d1.htm",
+      "date": "2026-08-24",
+      "kind": "Communiqué officiel"
+    },
+    "c-reg": {
+      "id": "c-reg",
+      "title": "HOPE-3 — NCT05126758",
+      "url": "https://clinicaltrials.gov/study/NCT05126758",
+      "date": "2026-08-28",
+      "kind": "Registre — dernière mise à jour"
+    },
+    "s-h1": {
+      "id": "s-h1",
+      "title": "Sensorion — résultats S1 diffusés par l’émetteur",
+      "url": "https://www.webdisclosure.com/press-release/sensorion-epa-alsen-inside-information-news-release-on-accounts-results-a3Q33qO3Din",
+      "date": "2026-09-23",
+      "kind": "Communiqué émetteur diffusé par Webdisclosure"
+    },
+    "s-pipe": {
+      "id": "s-pipe",
+      "title": "Sensorion — pipeline actuel",
+      "url": "https://www.sensorion.com/en/pipeline-2/",
+      "date": "",
+      "kind": "Page officielle non datée"
+    },
+    "a-q3": {
+      "id": "a-q3",
+      "title": "aTyr — résultats T3 2026",
+      "url": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-third-quarter-2026-results-and-provides",
+      "date": "2026-11-05",
+      "kind": "Communiqué officiel"
+    },
+    "a-fda": {
+      "id": "a-fda",
+      "title": "aTyr — protocole de nouvelle phase 3",
+      "url": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-alignment-fda-phase-3-study-efzofitimod",
+      "date": "2026-09-24",
+      "kind": "Communiqué officiel"
+    },
+    "a-10q": {
+      "id": "a-10q",
+      "title": "aTyr — 10-Q, limites EFZO-FIT et risques réglementaires",
+      "url": "https://investors.atyrpharma.com/static-files/0a4f9f06-9476-4db2-b85b-1b5fd1e49526",
+      "date": "2026-11-06",
+      "kind": "Rapport réglementaire de la société"
+    },
+    "a-reg": {
+      "id": "a-reg",
+      "title": "EFZO-FIT — NCT05415137",
+      "url": "https://clinicaltrials.gov/study/NCT05415137",
+      "date": "2026-06-04",
+      "kind": "Registre — dernière mise à jour"
+    },
+    "d-vertex": {
+      "id": "d-vertex",
+      "title": "Vertex — source officielle de découverte",
+      "url": "https://investors.vrtx.com/news-releases/news-release-details/vertex-reports-third-quarter-2026-financial-results",
+      "date": "",
+      "kind": "Source officielle — fiche de découverte"
+    },
+    "d-moderna": {
+      "id": "d-moderna",
+      "title": "Moderna — source officielle de découverte",
+      "url": "https://www.modernatx.com/research/product-pipeline",
+      "date": "",
+      "kind": "Source officielle — fiche de découverte"
+    },
+    "d-biontech": {
+      "id": "d-biontech",
+      "title": "BioNTech — source officielle de découverte",
+      "url": "https://www.biontech.com/int/en/home/pipeline-and-products/pipeline.html",
+      "date": "",
+      "kind": "Source officielle — fiche de découverte"
+    },
+    "d-alnylam": {
+      "id": "d-alnylam",
+      "title": "Alnylam — source officielle de découverte",
+      "url": "https://www.alnylam.com/medical-professional-resources",
+      "date": "",
+      "kind": "Source officielle — fiche de découverte"
+    },
+    "d-argenx": {
+      "id": "d-argenx",
+      "title": "argenx — source officielle de découverte",
+      "url": "https://argenx.com/innovation/our-pipeline",
+      "date": "",
+      "kind": "Source officielle — fiche de découverte"
+    },
+    "d-crispr": {
+      "id": "d-crispr",
+      "title": "CRISPR Therapeutics — source officielle de découverte",
+      "url": "https://ir.crisprtx.com/news-releases/news-release-details/crispr-therapeutics-provides-business-update-and-reports-third-7/",
+      "date": "2026-11-02",
+      "kind": "Source officielle — fiche de découverte"
+    }
+  },
+  "companies": [
+    {
+      "slug": "tiziana",
+      "name": "Tiziana",
+      "tickers": [
+        "TLSA"
+      ],
+      "disease": "Neurologie",
+      "technology": "Anticorps anti-CD3",
+      "phase": "Phase 2",
+      "mainProject": "Foralumab intranasal — na-SPMS",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "summary": "INFORM-MS : critère PET positif à 50 µg versus placebo (p=0,0168), tolérance favorable. La fatigue est un critère secondaire ; les comparaisons à la valeur initiale ne démontrent pas seules un bénéfice versus placebo.",
+      "programs": [
+        {
+          "name": "Foralumab / INFORM-MS",
+          "indication": "SEP secondairement progressive non active",
+          "phase": "Phase 2a, topline publiée",
+          "source": "t-ms"
+        },
+        {
+          "name": "Foralumab",
+          "indication": "Alzheimer, MSA et SLA",
+          "phase": "Phase 2",
+          "source": "t-fin"
+        }
+      ],
+      "finance": [
+        {
+          "label": "Trésorerie publiée",
+          "value": "3,9 M$",
+          "asOf": "2026-10-16",
+          "source": "t-fin"
+        },
+        {
+          "label": "Flux opérationnel",
+          "value": "−7,36 M$ sur S1 2026",
+          "asOf": "2026-06-30",
+          "source": "t-fin"
+        },
+        {
+          "label": "Continuité d’exploitation",
+          "value": "Incertitude significative signalée ; financement supplémentaire recherché",
+          "asOf": "2026-10-16",
+          "source": "t-fin"
+        }
+      ],
+      "events": [
+        {
+          "id": "inform-topline",
+          "title": "Publication de la topline INFORM-MS",
+          "source": "t-ms",
+          "dateKind": "exact",
+          "date": "2026-11-02",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "jefferies",
+          "title": "Présentation Jefferies, 14 h 30 GMT",
+          "source": "t-conf",
+          "dateKind": "exact",
+          "date": "2026-11-18",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Conférence / réunion",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "fda-path",
+          "title": "Échanges FDA sur la poursuite de foralumab",
+          "source": "t-ms",
+          "dateKind": "unknown",
+          "date": "",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Étape FDA",
+          "status": "À suivre",
+          "details": "Intention annoncée ; aucune date de réunion ni passage en phase 3 confirmé."
+        },
+        {
+          "id": "other-results",
+          "title": "Résultats Alzheimer / MSA : calendrier à confirmer",
+          "source": "t-fin",
+          "dateKind": "unknown",
+          "date": "",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": "La communication financière évoque la suite des données MS ; aucune date de publication précise retenue."
+        }
+      ],
+      "risks": "Signal biologique précoce, effectif limité et risque de financement/dilution. Pas de phase 3 autorisée déduite de la topline.",
+      "impact": "Une trajectoire réglementaire convaincante pourrait soutenir le titre ; financement et validation clinique restent déterminants.",
+      "sources": [
+        "t-ms",
+        "t-fin",
+        "t-conf",
+        "t-reg"
+      ]
+    },
+    {
+      "slug": "proqr",
+      "name": "ProQR",
+      "tickers": [
+        "PRQR"
+      ],
+      "disease": "Hépatologie / maladies rares",
+      "technology": "Édition ARN",
+      "phase": "Phase 1",
+      "mainProject": "AX-0811 / AX-0810 — modulation NTCP",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "summary": "Les deux premières cohortes AX-0811 sont recrutées. Les données d’engagement de cible chez volontaires sains restent distinctes d’une preuve de bénéfice chez les patients.",
+      "programs": [
+        {
+          "name": "AX-0811",
+          "indication": "Maladies cholestatiques / NTCP",
+          "phase": "Phase 1",
+          "source": "p-q3"
+        },
+        {
+          "name": "AX-0810",
+          "indication": "Modulation NTCP",
+          "phase": "Phase 1",
+          "source": "p-q3"
+        },
+        {
+          "name": "AX-0422",
+          "indication": "Syndrome de Hurler",
+          "phase": "Préparation clinique",
+          "source": "p-q3"
+        },
+        {
+          "name": "AX-2911",
+          "indication": "MASH / PNPLA3",
+          "phase": "Préparation clinique",
+          "source": "p-q3"
+        }
+      ],
+      "finance": [
+        {
+          "label": "Trésorerie",
+          "value": "103,0 M€",
+          "asOf": "2026-09-30",
+          "source": "p-q3"
+        },
+        {
+          "label": "Flux opérationnel",
+          "value": "−13,6 M€ au T3 2026",
+          "asOf": "2026-09-30",
+          "source": "p-q3"
+        },
+        {
+          "label": "Revenus / perte",
+          "value": "5,16 M€ / −12,4 M€ au T3",
+          "asOf": "2026-09-30",
+          "source": "p-q3"
+        },
+        {
+          "label": "Horizon annoncé",
+          "value": "Jusqu’à mi-2028, selon la société",
+          "asOf": "2026-11-12",
+          "source": "p-q3"
+        },
+        {
+          "label": "Emprunts comptables",
+          "value": "5,09 M€, hors passifs locatifs",
+          "asOf": "2026-09-30",
+          "source": "p-q3"
+        }
+      ],
+      "events": [
+        {
+          "id": "q3",
+          "title": "Point clinique et résultats T3",
+          "source": "p-q3",
+          "dateKind": "exact",
+          "date": "2026-11-12",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "ax0810-full",
+          "title": "Jeu complet AX-0810 et données précliniques AX-0811",
+          "source": "p-q3",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "Décembre 2026",
+          "start": "2026-12-01",
+          "end": "2026-12-31",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "ax0811-initial",
+          "title": "Premières données AX-0811",
+          "source": "p-q3",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "Début janvier 2027",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "patient-milestones",
+          "title": "Jalons patients : atrésie biliaire, AX-0422 et AX-2911",
+          "source": "p-q3",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "Premier semestre 2027",
+          "start": "2027-01-01",
+          "end": "2027-06-30",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": ""
+        }
+      ],
+      "risks": "Programmes précoces ; la translation des biomarqueurs en efficacité clinique reste à établir.",
+      "impact": "Les données AX-0811 peuvent influencer la confiance dans la plateforme ; une amélioration biologique ne garantit pas le succès clinique.",
+      "sources": [
+        "p-q3"
+      ]
+    },
+    {
+      "slug": "biocryst",
+      "name": "BioCryst",
+      "tickers": [
+        "BCRX"
+      ],
+      "disease": "Maladies rares",
+      "technology": "Petites molécules / anticorps",
+      "phase": "Commercialisé + Phase 3",
+      "mainProject": "ORLADEYO commercial ; navenibart en phase 3",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "summary": "ORLADEYO : ventes nettes T3 de 174,8 M$. L’extension des granulés aux 12 ans et plus est approuvée par la FDA selon le communiqué. ALPHA-ORBIT est entièrement recruté.",
+      "programs": [
+        {
+          "name": "ORLADEYO / berotralstat",
+          "indication": "Angio-œdème héréditaire",
+          "phase": "Commercialisé",
+          "source": "b-q3"
+        },
+        {
+          "name": "Navenibart / ALPHA-ORBIT",
+          "indication": "Angio-œdème héréditaire",
+          "phase": "Phase 3",
+          "source": "b-reg"
+        },
+        {
+          "name": "BCX17725",
+          "indication": "Syndrome de Netherton",
+          "phase": "Phase 1",
+          "source": "b-q3"
+        }
+      ],
+      "finance": [
+        {
+          "label": "Liquidités + placements, cash restreint inclus",
+          "value": "376,4 M$",
+          "asOf": "2026-09-30",
+          "source": "b-q3"
+        },
+        {
+          "label": "CA total / résultat opérationnel",
+          "value": "180,3 M$ / +53,3 M$ au T3",
+          "asOf": "2026-09-30",
+          "source": "b-q3"
+        },
+        {
+          "label": "Dette et redevances",
+          "value": "Prêt garanti 395,6 M$ ; obligations de financement sur royalties 421,7 M$",
+          "asOf": "2026-09-30",
+          "source": "b-q3"
+        },
+        {
+          "label": "Guidance ORLADEYO",
+          "value": "625–645 M$ sur 2026, maintenue",
+          "asOf": "2026-11-04",
+          "source": "b-q3"
+        }
+      ],
+      "events": [
+        {
+          "id": "q3",
+          "title": "Résultats T3 et mise à jour ORLADEYO",
+          "source": "b-q3",
+          "dateKind": "exact",
+          "date": "2026-11-04",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats financiers",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "bcx17725",
+          "title": "Premières données cliniques BCX17725",
+          "source": "b-q3",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "D’ici fin 2026",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "navenibart",
+          "title": "Topline ALPHA-ORBIT : critères à 6 et 12 mois",
+          "source": "b-q3",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "Troisième trimestre 2027",
+          "start": "2027-07-01",
+          "end": "2027-09-30",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": ""
+        }
+      ],
+      "risks": "Concurrence HAE, exécution commerciale, développement de navenibart et engagements de dette/royalties.",
+      "impact": "Les ventes et marges soutiennent le socle commercial ; navenibart constitue un catalyseur clinique distinct.",
+      "sources": [
+        "b-q3",
+        "b-reg"
+      ]
+    },
+    {
+      "slug": "valneva",
+      "name": "Valneva",
+      "tickers": [
+        "VLA",
+        "VALN"
+      ],
+      "disease": "Vaccins / infectieux",
+      "technology": "Vaccins",
+      "phase": "Revue réglementaire",
+      "mainProject": "VLA15 / PF-07307405 — Lyme, avec Pfizer",
+      "market": "Euronext Paris",
+      "country": "France",
+      "verifiedOn": "2026-11-14",
+      "summary": "EMA : dossier Lyme validé pour évaluation le 14 août, ce qui n’est pas une autorisation. Résultats de phase 2 S4V2 annoncés positifs le 9 novembre. IXCHIQ : BLA/IND retirés aux États-Unis en janvier.",
+      "programs": [
+        {
+          "name": "VLA15 / PF-07307405",
+          "indication": "Maladie de Lyme",
+          "phase": "Phase 3 terminée ; revue réglementaire",
+          "source": "v-ema"
+        },
+        {
+          "name": "S4V2",
+          "indication": "Shigellose",
+          "phase": "Phase 2, résultats publiés",
+          "source": "v-shig"
+        },
+        {
+          "name": "IXCHIQ",
+          "indication": "Chikungunya",
+          "phase": "Commercial selon territoire ; retrait américain",
+          "source": "v-us"
+        }
+      ],
+      "finance": [
+        {
+          "label": "Trésorerie",
+          "value": "121,5 M€",
+          "asOf": "2026-06-30",
+          "source": "v-h1"
+        },
+        {
+          "label": "Ventes de produits",
+          "value": "64,0 M€ au S1 2026",
+          "asOf": "2026-06-30",
+          "source": "v-h1"
+        },
+        {
+          "label": "Prévision ventes produits",
+          "value": "135–150 M€ sur 2026, réaffirmée en août",
+          "asOf": "2026-08-13",
+          "source": "v-h1"
+        },
+        {
+          "label": "Prochaine mise à jour",
+          "value": "Résultats neuf mois annoncés le 24 novembre",
+          "asOf": "2026-11-04",
+          "source": "v-cal"
+        }
+      ],
+      "events": [
+        {
+          "id": "withdrawal",
+          "title": "Retrait américain IXCHIQ annoncé",
+          "source": "v-us",
+          "dateKind": "exact",
+          "date": "2026-01-19",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Étape FDA",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "ema-validation",
+          "title": "Validation pour revue du dossier Lyme par EMA",
+          "source": "v-ema",
+          "dateKind": "exact",
+          "date": "2026-08-14",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Étape EMA",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "s4v2",
+          "title": "Publication des résultats de phase 2 S4V2",
+          "source": "v-shig",
+          "dateKind": "exact",
+          "date": "2026-11-09",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "nine-months",
+          "title": "Résultats financiers neuf mois et webcast, 15 h CET",
+          "source": "v-cal",
+          "dateKind": "exact",
+          "date": "2026-11-24",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats financiers",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "lyme-decisions",
+          "title": "Décisions réglementaires Lyme attendues",
+          "source": "v-pipe",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "2027",
+          "start": "2027-01-01",
+          "end": "2027-12-31",
+          "category": "Étape EMA",
+          "status": "À suivre",
+          "details": "Fenêtre société ; aucune réunion CHMP précise n’est annoncée dans les sources retenues."
+        }
+      ],
+      "risks": "Risque réglementaire et commercial des vaccins ; le retrait américain IXCHIQ limite ce marché.",
+      "impact": "Les décisions Lyme peuvent peser fortement sur les perspectives ; les ventes courantes et la trésorerie restent à suivre.",
+      "sources": [
+        "v-ema",
+        "v-h1",
+        "v-cal",
+        "v-shig",
+        "v-us",
+        "v-pipe"
+      ]
+    },
+    {
+      "slug": "maat",
+      "name": "MaaT Pharma",
+      "tickers": [
+        "MAAT"
+      ],
+      "disease": "Oncologie / greffe",
+      "technology": "Microbiome",
+      "phase": "Développement tardif",
+      "mainProject": "MaaT013 / Xervyteg ; MaaT033 et MaaT034",
+      "market": "Euronext Paris",
+      "country": "France",
+      "verifiedOn": "2026-11-14",
+      "summary": "EMA : recommandation de refus Xervyteg confirmée après réexamen du 17 septembre. PICASSO : objectif de sécurité/faisabilité atteint ; taux de réponse comparables entre bras, sans preuve de gain d’efficacité annoncée.",
+      "programs": [
+        {
+          "name": "MaaT013 / Xervyteg",
+          "indication": "aGvHD réfractaire",
+          "phase": "Refus CHMP après réexamen ; suite à définir",
+          "source": "m-ema"
+        },
+        {
+          "name": "MaaT033 / PHOEBUS",
+          "indication": "Allogreffe de cellules souches",
+          "phase": "Phase 2b",
+          "source": "m-h1"
+        },
+        {
+          "name": "MaaT034",
+          "indication": "Tumeurs solides / immunothérapie",
+          "phase": "Préclinique ; retour pré-IND reçu",
+          "source": "m-pre"
+        }
+      ],
+      "finance": [
+        {
+          "label": "Trésorerie",
+          "value": "17,1 M€",
+          "asOf": "2026-06-30",
+          "source": "m-h1"
+        },
+        {
+          "label": "CA",
+          "value": "1,1 M€ au S1 2026",
+          "asOf": "2026-06-30",
+          "source": "m-h1"
+        },
+        {
+          "label": "Flux opérations + investissements",
+          "value": "−15,0 M€ au S1, avant financement",
+          "asOf": "2026-06-30",
+          "source": "m-h1"
+        },
+        {
+          "label": "Horizon annoncé",
+          "value": "Décembre 2026, sous hypothèses opérationnelles",
+          "asOf": "2026-09-29",
+          "source": "m-h1"
+        },
+        {
+          "label": "Financement",
+          "value": "Financements/partenariats recherchés ; point cash attendu le 16 novembre",
+          "asOf": "2026-09-29",
+          "source": "m-h1"
+        }
+      ],
+      "events": [
+        {
+          "id": "ema-refusal",
+          "title": "Confirmation du refus CHMP après réexamen",
+          "source": "m-ema",
+          "dateKind": "exact",
+          "date": "2026-09-17",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Étape EMA",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "picasso",
+          "title": "Données préliminaires PICASSO publiées",
+          "source": "m-pic",
+          "dateKind": "exact",
+          "date": "2026-11-06",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "q3-cash",
+          "title": "Publication CA et trésorerie T3 — calendrier indicatif",
+          "source": "m-h1",
+          "dateKind": "exact",
+          "date": "2026-11-16",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats financiers",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "phoebus",
+          "title": "Topline de survie à un an PHOEBUS",
+          "source": "m-h1",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "Quatrième trimestre 2028",
+          "start": "2028-10-01",
+          "end": "2028-12-31",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "financing",
+          "title": "Financement et stratégie après refus européen",
+          "source": "m-h1",
+          "dateKind": "unknown",
+          "date": "",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Autre",
+          "status": "À suivre",
+          "details": "Aucune date de financement ni nouvelle décision EMA annoncée."
+        },
+        {
+          "id": "maat034-feedback",
+          "title": "Retour FDA pré-IND MaaT034 annoncé",
+          "source": "m-pre",
+          "dateKind": "exact",
+          "date": "2026-10-19",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Étape FDA",
+          "status": "Réalisé",
+          "details": ""
+        }
+      ],
+      "risks": "Horizon financier très proche et obstacle réglementaire majeur ; financement potentiellement dilutif. Le résultat PICASSO ne répare pas le refus dans l’aGvHD.",
+      "impact": "Sensibilité élevée au financement et à une stratégie réglementaire crédible ; aucune probabilité de rebond chiffrée.",
+      "sources": [
+        "m-ema",
+        "m-plan",
+        "m-h1",
+        "m-pic",
+        "m-pre"
+      ]
+    },
+    {
+      "slug": "capricor",
+      "name": "Capricor",
+      "tickers": [
+        "CAPR"
+      ],
+      "disease": "Maladies rares / neuromusculaire",
+      "technology": "Thérapie cellulaire",
+      "phase": "Revue réglementaire",
+      "mainProject": "Deramiocel / CAP-1002 — dystrophie de Duchenne",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "summary": "BLA sous revue FDA ; date cible PDUFA du 22 novembre. L’amendement majeur et les données OLE ont prolongé la revue. Les données d’extension ouvertes ne remplacent pas à elles seules une comparaison randomisée.",
+      "programs": [
+        {
+          "name": "Deramiocel / HOPE-3",
+          "indication": "Dystrophie de Duchenne",
+          "phase": "Phase 3 ; BLA sous revue FDA",
+          "source": "c-q3"
+        }
+      ],
+      "finance": [
+        {
+          "label": "Liquidités, placements et cash restreint",
+          "value": "198,5 M$",
+          "asOf": "2026-09-30",
+          "source": "c-q3"
+        },
+        {
+          "label": "Chiffre d’affaires",
+          "value": "0 sur les neuf premiers mois 2026",
+          "asOf": "2026-09-30",
+          "source": "c-q3"
+        },
+        {
+          "label": "Perte nette",
+          "value": "−42,7 M$ au T3 ; ce n’est pas le cash burn",
+          "asOf": "2026-09-30",
+          "source": "c-q3"
+        },
+        {
+          "label": "Horizon annoncé",
+          "value": "Au moins douze mois selon le plan actuel",
+          "asOf": "2026-11-10",
+          "source": "c-q3"
+        },
+        {
+          "label": "ATM",
+          "value": "Aucune vente ATM du 1er janvier au 10 novembre 2026 selon la société",
+          "asOf": "2026-11-10",
+          "source": "c-q3"
+        }
+      ],
+      "events": [
+        {
+          "id": "extension",
+          "title": "Annonce du report de la date cible PDUFA",
+          "source": "c-delay",
+          "dateKind": "exact",
+          "date": "2026-08-24",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Étape FDA",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "q3",
+          "title": "Résultats T3 et confirmation de la cible PDUFA",
+          "source": "c-q3",
+          "dateKind": "exact",
+          "date": "2026-11-10",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats financiers",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "pdufa",
+          "title": "Date cible PDUFA deramiocel — pas une réunion",
+          "source": "c-q3",
+          "dateKind": "exact",
+          "date": "2026-11-22",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Étape FDA",
+          "status": "À suivre",
+          "details": "Date cible annoncée par Capricor : elle ne garantit ni décision ce jour-là ni approbation."
+        }
+      ],
+      "risks": "Issue FDA binaire, inspection BIMO/Form 483 et réponse en attente selon la société ; coûts de préparation commerciale.",
+      "impact": "Une approbation, un refus ou un nouveau délai peut entraîner une forte volatilité dans les deux sens.",
+      "sources": [
+        "c-q3",
+        "c-delay",
+        "c-reg"
+      ]
+    },
+    {
+      "slug": "sensorion",
+      "name": "Sensorion",
+      "tickers": [
+        "ALSEN"
+      ],
+      "disease": "Audition / génétique",
+      "technology": "Thérapie génique AAV",
+      "phase": "Phase 1/2",
+      "mainProject": "SENS-601 / GJB2 — HearConnex",
+      "market": "Euronext Paris",
+      "country": "France",
+      "verifiedOn": "2026-11-14",
+      "summary": "Recentrage sur SENS-601 : SENS-501 arrêté en juin. Autorisation ANSM de HearConnex annoncée en septembre ; premier patient visé début 2027. Les résultats ne sont pas encore établis chez les patients HearConnex.",
+      "programs": [
+        {
+          "name": "SENS-601 / HearConnex",
+          "indication": "Surdité liée à GJB2",
+          "phase": "Phase 1/2 autorisée ; premier patient visé",
+          "source": "s-h1"
+        },
+        {
+          "name": "SENS-501",
+          "indication": "Surdité liée à OTOF",
+          "phase": "Développement arrêté",
+          "source": "s-h1"
+        },
+        {
+          "name": "SENS-401",
+          "indication": "Préservation de l’audition",
+          "phase": "Études de preuve de concept terminées ; partenariats recherchés",
+          "source": "s-pipe"
+        }
+      ],
+      "finance": [
+        {
+          "label": "Liquidités au sens large",
+          "value": "88 M€, avec dépôts à court terme",
+          "asOf": "2026-06-30",
+          "source": "s-h1"
+        },
+        {
+          "label": "Dont cash et équivalents",
+          "value": "43,1 M€ ; ne pas confondre avec les 88 M€",
+          "asOf": "2026-06-30",
+          "source": "s-h1"
+        },
+        {
+          "label": "Perte nette",
+          "value": "−20,7 M€ au S1 2026",
+          "asOf": "2026-06-30",
+          "source": "s-h1"
+        },
+        {
+          "label": "Horizon annoncé",
+          "value": "Fin 2027, selon la société",
+          "asOf": "2026-09-23",
+          "source": "s-h1"
+        }
+      ],
+      "events": [
+        {
+          "id": "sens501-stop",
+          "title": "Arrêt du développement SENS-501 annoncé",
+          "source": "s-h1",
+          "dateKind": "exact",
+          "date": "2026-06-10",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "Réalisé",
+          "details": "Événement daté dans le communiqué récapitulatif du 23 septembre."
+        },
+        {
+          "id": "sens601-cta",
+          "title": "Annonce de l’autorisation ANSM HearConnex",
+          "source": "s-h1",
+          "dateKind": "exact",
+          "date": "2026-09-03",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Autre",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "ind-cta",
+          "title": "Dépôts IND américain / CTA australien SENS-601",
+          "source": "s-h1",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "D’ici fin 2026",
+          "start": "",
+          "end": "",
+          "category": "Étape FDA",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "first-patient",
+          "title": "Premier patient HearConnex visé",
+          "source": "s-h1",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "Début 2027",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": ""
+        }
+      ],
+      "risks": "Développement clinique précoce, sécurité de la délivrance intracochléaire et risque d’exécution.",
+      "impact": "Les premiers patients et futures données cliniques peuvent réduire ou accroître l’incertitude ; le potentiel commercial reste hypothétique.",
+      "sources": [
+        "s-h1",
+        "s-pipe"
+      ]
+    },
+    {
+      "slug": "atyr",
+      "name": "aTyr Pharma",
+      "tickers": [
+        "ATYR"
+      ],
+      "disease": "Immunologie / fibrose pulmonaire",
+      "technology": "Biothérapie",
+      "phase": "Phase 3 à relancer",
+      "mainProject": "Efzofitimod — sarcoïdose pulmonaire et SSc-ILD",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "summary": "EFZO-FIT n’avait pas atteint son critère principal de réduction des corticoïdes. Un nouveau protocole de phase 3, avec FVC comme critère principal, a été aligné avec FDA ; son avancement dépend notamment de partenariats.",
+      "programs": [
+        {
+          "name": "Efzofitimod / nouvelle phase 3",
+          "indication": "Sarcoïdose pulmonaire restrictive",
+          "phase": "Protocole aligné ; activités préparatoires",
+          "source": "a-fda"
+        },
+        {
+          "name": "Efzofitimod / EFZO-CONNECT",
+          "indication": "Sclérodermie avec ILD",
+          "phase": "Phase 2, recrutement terminé",
+          "source": "a-q3"
+        },
+        {
+          "name": "ATYR0101",
+          "indication": "Fibrose",
+          "phase": "Préclinique",
+          "source": "a-q3"
+        }
+      ],
+      "finance": [
+        {
+          "label": "Liquidités et placements, cash restreint inclus",
+          "value": "50,3 M$",
+          "asOf": "2026-09-30",
+          "source": "a-q3"
+        },
+        {
+          "label": "Perte nette attribuable",
+          "value": "−18,3 M$ au T3 ; pas un flux de trésorerie",
+          "asOf": "2026-09-30",
+          "source": "a-q3"
+        },
+        {
+          "label": "Horizon annoncé",
+          "value": "Fin 2028, pour le plan opérationnel actuel",
+          "asOf": "2026-11-05",
+          "source": "a-q3"
+        },
+        {
+          "label": "Financement du développement",
+          "value": "Partenariats prioritaires pour avancer la nouvelle phase 3",
+          "asOf": "2026-11-05",
+          "source": "a-q3"
+        }
+      ],
+      "events": [
+        {
+          "id": "efzofit-failure",
+          "title": "EFZO-FIT : critère principal non atteint en 2025",
+          "source": "a-10q",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "category": "Résultats cliniques",
+          "status": "Réalisé",
+          "details": "Année du résultat rapportée dans le 10-Q de novembre 2026 ; aucun jour de publication n’est déduit."
+        },
+        {
+          "id": "fda-design",
+          "title": "Alignement annoncé sur le protocole de nouvelle phase 3",
+          "source": "a-fda",
+          "dateKind": "exact",
+          "date": "2026-09-24",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Étape FDA",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "q3",
+          "title": "Résultats T3 et activités préparatoires phase 3",
+          "source": "a-q3",
+          "dateKind": "exact",
+          "date": "2026-11-05",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats financiers",
+          "status": "Réalisé",
+          "details": ""
+        },
+        {
+          "id": "connect",
+          "title": "Résultats complets EFZO-CONNECT",
+          "source": "a-q3",
+          "dateKind": "window",
+          "date": "",
+          "windowLabel": "Deuxième trimestre 2027",
+          "start": "2027-04-01",
+          "end": "2027-06-30",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": ""
+        },
+        {
+          "id": "partner",
+          "title": "Partenariat pour la poursuite de la nouvelle phase 3",
+          "source": "a-q3",
+          "dateKind": "unknown",
+          "date": "",
+          "windowLabel": "",
+          "start": "",
+          "end": "",
+          "category": "Résultats cliniques",
+          "status": "À suivre",
+          "details": "Aucune date de signature ni d’approbation FDA annoncée."
+        }
+      ],
+      "risks": "Échec du critère principal EFZO-FIT ; le 10-Q rapporte des réserves FDA sur efficacité et sécurité du nouveau schéma. L’alignement de protocole n’est pas une approbation.",
+      "impact": "Les résultats SSc-ILD et un financement partenarial peuvent déplacer les attentes ; l’horizon cash actuel ne finance pas nécessairement toute la nouvelle phase 3.",
+      "sources": [
+        "a-q3",
+        "a-fda",
+        "a-10q",
+        "a-reg"
+      ]
+    }
+  ],
+  "catalogue": [
+    {
+      "slug": "vertex",
+      "name": "Vertex",
+      "tickers": [
+        "VRTX"
+      ],
+      "disease": "Maladies rares",
+      "technology": "Petites molécules / thérapies cellulaires",
+      "phase": "Commercialisé + clinique",
+      "mainProject": "Portefeuille mucoviscidose et autres maladies graves",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "sources": [
+        "d-vertex"
+      ],
+      "summary": "Périmètre de découverte seulement : profil général et cotation. Finances et prochains catalyseurs non documentés dans cette fiche."
+    },
+    {
+      "slug": "moderna",
+      "name": "Moderna",
+      "tickers": [
+        "MRNA"
+      ],
+      "disease": "Vaccins / oncologie",
+      "technology": "ARN messager",
+      "phase": "Commercialisé + clinique",
+      "mainProject": "Vaccins et immunothérapies ARNm",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "sources": [
+        "d-moderna"
+      ],
+      "summary": "Périmètre de découverte seulement : profil général et cotation. Finances et prochains catalyseurs non documentés dans cette fiche."
+    },
+    {
+      "slug": "biontech",
+      "name": "BioNTech",
+      "tickers": [
+        "BNTX"
+      ],
+      "disease": "Oncologie / vaccins",
+      "technology": "ARN messager / immunothérapie",
+      "phase": "Commercialisé + clinique",
+      "mainProject": "Vaccins et pipeline oncologique",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "sources": [
+        "d-biontech"
+      ],
+      "summary": "Périmètre de découverte seulement : profil général et cotation. Finances et prochains catalyseurs non documentés dans cette fiche."
+    },
+    {
+      "slug": "alnylam",
+      "name": "Alnylam",
+      "tickers": [
+        "ALNY"
+      ],
+      "disease": "Maladies rares / cardiovasculaire",
+      "technology": "ARN interférent",
+      "phase": "Commercialisé + clinique",
+      "mainProject": "Thérapies RNAi",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "sources": [
+        "d-alnylam"
+      ],
+      "summary": "Périmètre de découverte seulement : profil général et cotation. Finances et prochains catalyseurs non documentés dans cette fiche."
+    },
+    {
+      "slug": "argenx",
+      "name": "argenx",
+      "tickers": [
+        "ARGX"
+      ],
+      "disease": "Immunologie",
+      "technology": "Anticorps",
+      "phase": "Commercialisé + clinique",
+      "mainProject": "Portefeuille immunologique",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "sources": [
+        "d-argenx"
+      ],
+      "summary": "Périmètre de découverte seulement : profil général et cotation. Finances et prochains catalyseurs non documentés dans cette fiche."
+    },
+    {
+      "slug": "crispr",
+      "name": "CRISPR Therapeutics",
+      "tickers": [
+        "CRSP"
+      ],
+      "disease": "Maladies génétiques / oncologie",
+      "technology": "Édition génomique",
+      "phase": "Commercialisé + clinique",
+      "mainProject": "CASGEVY et pipeline CRISPR",
+      "market": "NASDAQ",
+      "country": "États-Unis",
+      "verifiedOn": "2026-11-14",
+      "sources": [
+        "d-crispr"
+      ],
+      "summary": "Périmètre de découverte seulement : profil général et cotation. Finances et prochains catalyseurs non documentés dans cette fiche."
+    }
+  ]
+}
