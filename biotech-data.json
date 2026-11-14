@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-14.1",
+  "version": "2026-11-14.2",
   "asOf": "2026-11-14",
   "sources": {
     "t-fin": {
@@ -1351,5 +1351,614 @@
       ],
       "summary": "Périmètre de découverte seulement : profil général et cotation. Finances et prochains catalyseurs non documentés dans cette fiche."
     }
-  ]
+  ],
+  "remoteNews": [
+    {
+      "slug": "biocryst",
+      "title": "BioCryst Presents New Real-World Evidence Showing Reduced Angioedema-Related Medical Visits After Switching to ORLADEYO® (berotralstat) at ACAAI 2026 Annual Scientific Meeting",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-presents-new-real-world-evidence-showing-reduced",
+      "date": "2026-11-13T12:00:36Z",
+      "dateRaw": "Fri, 13 Nov 2026 07:00:36 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana Life Sciences to Present at the Jefferies Global Healthcare Conference 2026 in London",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-life-sciences-present-jefferies-global-healthcare-1",
+      "date": "2026-11-12T13:00:00Z",
+      "dateRaw": "Thu, 12 Nov 2026 08:00:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma to Participate in Upcoming Investor Conferences",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-participate-upcoming-investor-conferences-0",
+      "date": "2026-11-11T13:00:00Z",
+      "dateRaw": "Wed, 11 Nov 2026 08:00:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics Reports Third Quarter 2026 Financial Results and Provides Corporate Update",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/359/capricor-therapeutics-reports-third-quarter-2026-financial",
+      "date": "2026-11-10T21:05:00Z",
+      "dateRaw": "Tue, 10 Nov 26 16:05:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva Reports Sustained 94% Seroresponse Five Years After a Single Dose of Chikungunya Vaccine IXCHIQ®",
+      "link": "https://valneva.com/press-release/valneva-reports-sustained-94-seroresponse-five-years-after-a-single-dose-of-chikungunya-vaccine-ixchiq/",
+      "date": "2026-11-10T06:00:45Z",
+      "dateRaw": "Tue, 10 Nov 2026 06:00:45 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana KOL Call Highlights Consistency Between Positive Phase 2a INFORM-MS Topline Results and Longer-Term Clinical Benefits Observed in Expanded Access Program for Patients with Non-Active Secondary Progressive Multiple Sclerosis Treated with Intranasal Foralumab",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-kol-call-highlights-consistency-between-positive-phase",
+      "date": "2026-11-09T18:30:00Z",
+      "dateRaw": "Mon, 09 Nov 2026 13:30:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor’s HOPE-3 Phase 3 Cardiac Results for Deramiocel Win American Heart Association Outstanding Research Award in Pediatric Cardiology",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/358/capricors-hope-3-phase-3-cardiac-results-for-deramiocel",
+      "date": "2026-11-09T14:00:00Z",
+      "dateRaw": "Mon, 09 Nov 26 09:00:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana Life Sciences to Present at BIO-Europe 2026 and Host KOL Webcast",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-life-sciences-present-bio-europe-2026-and-host-kol",
+      "date": "2026-11-09T12:00:00Z",
+      "dateRaw": "Mon, 09 Nov 2026 07:00:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva Announces Positive Phase 2 Results for Tetravalent Shigella Vaccine Candidate S4V2",
+      "link": "https://valneva.com/press-release/valneva-announces-positive-phase-2-results-for-tetravalent-shigella-vaccine-candidate-s4v2/",
+      "date": "2026-11-09T06:00:00Z",
+      "dateRaw": "Mon, 09 Nov 2026 06:00:00 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "November 6, 2026: MaaT Pharma Provides an Update on Preliminary Findings from the Investigator-Sponsored Phase 2a PICASSO Trial in Metastatic Melanoma",
+      "link": "https://www.maatpharma.com/november-6-2026-maat-pharma-provides-an-update-on-preliminary-findings-from-the-investigator-sponsored-phase-2a-picasso-trial-in-metastatic-melanoma/",
+      "date": "2026-11-06T06:30:02Z",
+      "dateRaw": "Fri, 06 Nov 2026 06:30:02 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma Announces Third Quarter 2026 Results and Provides Corporate Update",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-third-quarter-2026-results-and-provides",
+      "date": "2026-11-05T21:01:00Z",
+      "dateRaw": "Thu, 05 Nov 2026 16:01:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana to Host Investor Call with Key Opinion Leaders to Discuss Positive Phase 2a INFORM-MS Topline Results",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-host-investor-call-key-opinion-leaders-discuss-positive",
+      "date": "2026-11-05T19:00:00Z",
+      "dateRaw": "Thu, 05 Nov 2026 14:00:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst to Present at Upcoming Investor Conferences",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-present-upcoming-investor-conferences-27",
+      "date": "2026-11-04T21:01:47Z",
+      "dateRaw": "Wed, 04 Nov 2026 16:01:47 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva to Report Nine-Month 2026 Consolidated Financial Results on November 24, 2026",
+      "link": "https://valneva.com/press-release/valneva-to-report-nine-month-2026-consolidated-financial-results-on-november-24-2026/",
+      "date": "2026-11-04T16:45:36Z",
+      "dateRaw": "Wed, 04 Nov 2026 16:45:36 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst Reports Third Quarter 2026 Financial Results",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-reports-third-quarter-2026-financial-results",
+      "date": "2026-11-04T12:00:56Z",
+      "dateRaw": "Wed, 04 Nov 2026 07:00:56 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics to Report Third Quarter 2026 Financial Results and Provide Recent Corporate Update on November 10",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/357/capricor-therapeutics-to-report-third-quarter-2026",
+      "date": "2026-11-03T14:00:00Z",
+      "dateRaw": "Tue, 03 Nov 26 09:00:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana Announces Positive Topline Results from Phase 2a INFORM-MS Trial of Intranasal Foralumab in Non-Active Secondary Progressive Multiple Sclerosis",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-announces-positive-topline-results-phase-2a-inform-ms",
+      "date": "2026-11-02T12:00:00Z",
+      "dateRaw": "Mon, 02 Nov 2026 07:00:00 -0500",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma Announces Publication of Results from the Phase 3 EFZO-FIT™ Study of Efzofitimod in Pulmonary Sarcoidosis in The Lancet Respiratory Medicine",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-publication-results-phase-3-efzo-fittm",
+      "date": "2026-10-29T12:00:00Z",
+      "dateRaw": "Thu, 29 Oct 2026 08:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst to Present New Data for ORLADEYO® (berotralstat) and Navenibart at the 2026 American College of Allergy, Asthma & Immunology Annual Scientific Meeting",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-present-new-data-orladeyor-berotralstat-and-navenibart",
+      "date": "2026-10-29T11:00:24Z",
+      "dateRaw": "Thu, 29 Oct 2026 07:00:24 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma Announces One-for-40 Reverse Stock Split",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-one-40-reverse-stock-split",
+      "date": "2026-10-27T13:00:00Z",
+      "dateRaw": "Tue, 27 Oct 2026 09:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst to Report Third Quarter 2026 Financial Results on November 4",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-report-third-quarter-2026-financial-results-november-4",
+      "date": "2026-10-21T20:01:27Z",
+      "dateRaw": "Wed, 21 Oct 2026 16:01:27 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst Announces U.S. FDA Approval of ORLADEYO® 150 mg Oral Pellets for Adults and Adolescents with HAE",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-announces-us-fda-approval-orladeyor-150-mg-oral-pellets",
+      "date": "2026-10-21T11:00:48Z",
+      "dateRaw": "Wed, 21 Oct 2026 07:00:48 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana Management Team to Attend the 10th Joint ACTRIMS-ECTRIMS Meeting in Toronto",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-management-team-attend-10th-joint-actrims-ectrims",
+      "date": "2026-10-21T11:00:00Z",
+      "dateRaw": "Wed, 21 Oct 2026 07:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "October 19, 2026: MaaT Pharma Receives FDA Feedback Following Pre-IND Meeting Supporting Continued Development of MaaT034 in Solid Tumors",
+      "link": "https://www.maatpharma.com/october-19-2026-maat-pharma-receives-fda-feedback-following-pre-ind-meeting-supporting-continued-development-of-maat034-in-solid-tumors/",
+      "date": "2026-10-19T15:39:39Z",
+      "dateRaw": "Mon, 19 Oct 2026 15:39:39 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma Announces Research Collaboration with Montefiore Einstein",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-research-collaboration-montefiore-einstein",
+      "date": "2026-10-19T11:00:00Z",
+      "dateRaw": "Mon, 19 Oct 2026 07:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana Doses Last Patient in Phase 2 Trial of Intranasal Foralumab for Mild Alzheimer’s Disease",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-doses-last-patient-phase-2-trial-intranasal-foralumab",
+      "date": "2026-10-16T11:00:00Z",
+      "dateRaw": "Fri, 16 Oct 2026 07:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva to Present and Hold Investor Meetings at Upcoming U.S. and European Healthcare Conferences",
+      "link": "https://valneva.com/press-release/valneva-to-present-and-hold-investor-meetings-at-upcoming-u-s-and-european-healthcare-conferences-3/",
+      "date": "2026-10-14T15:45:34Z",
+      "dateRaw": "Wed, 14 Oct 2026 15:45:34 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma Announces Publication Demonstrating Anti-Fibrotic Effects of ATYR0101 in the Journal of Biological Chemistry",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-publication-demonstrating-anti-fibrotic",
+      "date": "2026-10-13T12:00:00Z",
+      "dateRaw": "Tue, 13 Oct 2026 08:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva Provides Update on IXCHIQ® in the United Kingdom",
+      "link": "https://valneva.com/press-release/valneva-provides-update-on-ixchiq-in-the-united-kingdom/",
+      "date": "2026-10-07T20:00:41Z",
+      "dateRaw": "Wed, 07 Oct 2026 20:00:41 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics Presents Positive HOPE-3 Open-Label Extension Data on Upper Limb Function in Duchenne Muscular Dystrophy at 2026 World Muscle Society Congress",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/356/capricor-therapeutics-presents-positive-hope-3-open-label",
+      "date": "2026-10-05T13:00:00Z",
+      "dateRaw": "Mon, 05 Oct 26 09:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst Announces Formation of Scientific Advisory Board to Drive Rare Disease Pipeline Innovation and Growth",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-announces-formation-scientific-advisory-board-drive",
+      "date": "2026-10-05T11:00:33Z",
+      "dateRaw": "Mon, 05 Oct 2026 07:00:33 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana Life Sciences Files for Orphan Drug Designation with the FDA for Intranasal Foralumab for the Treatment of Multiple System Atrophy (MSA)",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-life-sciences-files-orphan-drug-designation-fda",
+      "date": "2026-09-30T11:00:00Z",
+      "dateRaw": "Wed, 30 Sep 2026 07:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "September 29, 2026: MaaT Pharma Publishes its Half-Year 2026 Results and Provides a Business Update",
+      "link": "https://www.maatpharma.com/september-29-2026-maat-pharma-publishes-its-half-year-2026-results-and-provides-a-business-update/",
+      "date": "2026-09-29T15:43:26Z",
+      "dateRaw": "Tue, 29 Sep 2026 15:43:26 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana Life Sciences Announces First Participants Dosed in ALS BANYAN Clinical Trial of Intranasal Foralumab",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-life-sciences-announces-first-participants-dosed-als",
+      "date": "2026-09-28T11:00:00Z",
+      "dateRaw": "Mon, 28 Sep 2026 07:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma Announces Alignment with FDA on Phase 3 Study of Efzofitimod in Pulmonary Sarcoidosis",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-alignment-fda-phase-3-study-efzofitimod",
+      "date": "2026-09-24T10:00:00Z",
+      "dateRaw": "Thu, 24 Sep 2026 06:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "September 21, 2026: MaaT Pharma Announces Upcoming Pre-IND Meeting with the FDA and Advances MaaT034 Toward Clinical Development in Solid Tumors",
+      "link": "https://www.maatpharma.com/september-21-2026-maat-pharma-announces-upcoming-pre-ind-meeting-with-the-fda-and-advances-maat034-toward-clinical-development-in-solid-tumors/",
+      "date": "2026-09-21T16:05:22Z",
+      "dateRaw": "Mon, 21 Sep 2026 16:05:22 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "tiziana",
+      "title": "Tiziana Announces Last Patient Completes Last Visit in Phase 2a INFORM-MS Trial of Intranasal Foralumab",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-announces-last-patient-completes-last-visit-phase-2a",
+      "date": "2026-09-21T11:00:00Z",
+      "dateRaw": "Mon, 21 Sep 2026 07:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "September 18, 2026: MaaT Pharma Provides Update on MaaT013 (Xervyteg®) Potential Development Plan Following CHMP Negative Opinion After Re-examination",
+      "link": "https://www.maatpharma.com/september-18-2026-maat-pharma-provides-update-on-maat013-xervyteg-potential-development-plan-following-chmp-negative-opinion-after-re-examination/",
+      "date": "2026-09-18T04:34:32Z",
+      "dateRaw": "Fri, 18 Sep 2026 04:34:32 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics to Present HOPE-3 and HOPE-3 Open-Label Extension Data at 2026 World Muscle Society Congress",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/355/capricor-therapeutics-to-present-hope-3-and-hope-3",
+      "date": "2026-09-17T12:30:00Z",
+      "dateRaw": "Thu, 17 Sep 26 08:30:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "September 15, 2026: MaaT Pharma Receives Negative CHMP Trend Vote for MaaT013 (Xervyteg®) Following Re-Examination for its Conditional Marketing Authorization Application  in Europe",
+      "link": "https://www.maatpharma.com/september-15-2026-maat-pharma-receives-negative-chmp-trend-vote-for-maat013-xervyteg-following-re-examination-for-its-conditional-marketing-authorization-application-in-europe/",
+      "date": "2026-09-15T05:04:35Z",
+      "dateRaw": "Tue, 15 Sep 2026 05:04:35 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma Provides Update on Timing of Regulatory Response for Planned Phase 3 Study of Efzofitimod in Pulmonary Sarcoidosis",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-provides-update-timing-regulatory-response-planned",
+      "date": "2026-09-01T20:36:00Z",
+      "dateRaw": "Tue, 01 Sep 2026 16:36:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst to Present at Upcoming Investor Conference",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-present-upcoming-investor-conference-6",
+      "date": "2026-09-01T11:00:25Z",
+      "dateRaw": "Tue, 01 Sep 2026 07:00:25 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst Announces Approval of ORLADEYO® for Pediatric HAE Patients in Japan",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-announces-approval-orladeyor-pediatric-hae-patients",
+      "date": "2026-08-25T11:01:47Z",
+      "dateRaw": "Tue, 25 Aug 2026 07:01:47 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics Announces Extension of PDUFA Target Action Date as FDA Continues Review of Deramiocel BLA",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/354/capricor-therapeutics-announces-extension-of-pdufa-target",
+      "date": "2026-08-24T13:25:00Z",
+      "dateRaw": "Mon, 24 Aug 26 09:25:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Pfizer and Valneva’s Lyme Disease Vaccine Candidate Marketing Authorization Application Validated by European Medicines Agency",
+      "link": "https://valneva.com/press-release/pfizer-and-valnevas-lyme-disease-vaccine-candidate-marketing-authorization-application-validated-by-european-medicines-agency/",
+      "date": "2026-08-14T05:00:12Z",
+      "dateRaw": "Fri, 14 Aug 2026 05:00:12 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics Reports Second Quarter 2026 Financial Results and Provides Corporate Update",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/353/capricor-therapeutics-reports-second-quarter-2026-financial",
+      "date": "2026-08-13T20:05:00Z",
+      "dateRaw": "Thu, 13 Aug 26 16:05:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva Reports Half Year 2026 Financial Results and Provides Corporate Updates",
+      "link": "https://valneva.com/press-release/valneva-reports-half-year-2026-financial-results-and-provides-corporate-updates/",
+      "date": "2026-08-13T05:00:06Z",
+      "dateRaw": "Thu, 13 Aug 2026 05:00:06 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics to Report Second Quarter 2026 Financial Results and Provide Recent Corporate Update on August 13",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/352/capricor-therapeutics-to-report-second-quarter-2026",
+      "date": "2026-08-10T12:30:00Z",
+      "dateRaw": "Mon, 10 Aug 26 08:30:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma Announces Second Quarter 2026 Results, Program Prioritization and Corporate Restructuring to Support Efzofitimod Program in ILD",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-announces-second-quarter-2026-results-program",
+      "date": "2026-08-07T20:01:00Z",
+      "dateRaw": "Fri, 07 Aug 2026 16:01:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "biocryst",
+      "title": "BioCryst Reports Second Quarter 2026 Financial Results",
+      "link": "https://ir.biocryst.com/news-releases/news-release-details/biocryst-reports-second-quarter-2026-financial-results",
+      "date": "2026-08-05T11:00:50Z",
+      "dateRaw": "Wed, 05 Aug 2026 07:00:50 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics Provides Update on FDA Advisory Committee Meeting for Deramiocel",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/351/capricor-therapeutics-provides-update-on-fda-advisory",
+      "date": "2026-07-30T13:30:00Z",
+      "dateRaw": "Thu, 30 Jul 26 09:30:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "capricor",
+      "title": "The Lancet Publishes HOPE-3 Data for Capricor Therapeutics’ Deramiocel in Duchenne Muscular Dystrophy",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/350/the-lancet-publishes-hope-3-data-for-capricor",
+      "date": "2026-07-29T14:05:00Z",
+      "dateRaw": "Wed, 29 Jul 26 10:05:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva to Report First Half 2026 Consolidated Financial Results on August 13, 2026",
+      "link": "https://valneva.com/press-release/valneva-to-report-first-half-2026-consolidated-financial-results-on-august-13-2026/",
+      "date": "2026-07-22T15:45:17Z",
+      "dateRaw": "Wed, 22 Jul 2026 15:45:17 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "atyr",
+      "title": "aTyr Pharma to Present Subgroup Analysis of Phase 3 EFZO-FIT™ Study of Efzofitimod in Pulmonary Sarcoidosis at WASOG 2026",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-present-subgroup-analysis-phase-3-efzo-fittm-study",
+      "date": "2026-07-15T12:00:00Z",
+      "dateRaw": "Wed, 15 Jul 2026 08:00:00 -0400",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "July 6, 2026: MaaT Pharma Presents the Results of its Annual General Meeting and Provides a Statement on its  Half-Year Liquidity Contract",
+      "link": "https://www.maatpharma.com/july-6-2026-maat-pharma-presents-the-results-of-its-annual-general-meeting-and-provides-a-statement-on-its-half-year-liquidity-contract/",
+      "date": "2026-07-06T14:57:57Z",
+      "dateRaw": "Mon, 06 Jul 2026 14:57:57 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "July 2nd, 2026: Monthly Information Regarding the Total Number of Voting Rights and Shares Comprising the Share Capital",
+      "link": "https://www.maatpharma.com/july-2nd-2026-monthly-information-regarding-the-total-number-of-voting-rights-and-shares-comprising-the-share-capital/",
+      "date": "2026-07-02T16:07:29Z",
+      "dateRaw": "Thu, 02 Jul 2026 16:07:29 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "June 26, 2026: MaaT Pharma Announces Plan to Request Re-Examination Following Negative CHMP Opinion for MaaT013 for the treatment of acute Graft-versus-Host Disease",
+      "link": "https://www.maatpharma.com/june-26-2026-maat-pharma-announces-plan-to-request-re-examination-following-negative-chmp-opinion-for-maat013-for-the-treatment-of-acute-graft-versus-host-disease/",
+      "date": "2026-06-26T05:15:26Z",
+      "dateRaw": "Fri, 26 Jun 2026 05:15:26 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva Announces Successful Outcome of its Annual General Meeting",
+      "link": "https://valneva.com/press-release/valneva-announces-successful-outcome-of-its-annual-general-meeting/",
+      "date": "2026-06-25T15:45:36Z",
+      "dateRaw": "Thu, 25 Jun 2026 15:45:36 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "valneva",
+      "title": "Valneva Announces Availability of Documentation for its Annual General Meeting",
+      "link": "https://valneva.com/press-release/valneva-announces-availability-of-documentation-for-its-annual-general-meeting/",
+      "date": "2026-06-04T05:00:25Z",
+      "dateRaw": "Thu, 04 Jun 2026 05:00:25 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "maat",
+      "title": "May 26, 2026: MaaT Pharma Provides Business Update and Reports Financial Results for the First Quarter 2026",
+      "link": "https://www.maatpharma.com/may-26-2026-maat-pharma-provides-business-update-and-reports-financial-results-for-the-first-quarter-2026/",
+      "date": "2026-05-26T16:42:35Z",
+      "dateRaw": "Tue, 26 May 2026 16:42:35 +0000",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR Announces Third Quarter 2026 Operating and Financial Results",
+      "link": "https://www.proqr.com/node/2173362",
+      "date": null,
+      "dateRaw": "Thu, 11/12/2026 - 12:00",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR to Present Clinical and Preclinical Progress from AX-0810 and AX-0811 at Upcoming Conferences",
+      "link": "https://www.proqr.com/node/2173361",
+      "date": null,
+      "dateRaw": "Wed, 10/28/2026 - 12:00",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR Announces Appointment of Chris Hart as Chief Data and AI Officer and Thomas Wolf to join the Board of Directors as Strategic AI Advisor",
+      "link": "https://www.proqr.com/node/2173353",
+      "date": null,
+      "dateRaw": "Wed, 09/23/2026 - 12:00",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR Announces First Participant Dosed in Phase 1 Study of AX-0811 and Virtual Investor and Analyst Educational Event on September 30, 2026",
+      "link": "https://www.proqr.com/node/2173346",
+      "date": null,
+      "dateRaw": "Wed, 09/09/2026 - 12:00",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR to Participate in Upcoming Investor Conferences in September 2026",
+      "link": "https://www.proqr.com/node/2173344",
+      "date": null,
+      "dateRaw": "Wed, 09/02/2026 - 12:00",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR Announces Second Quarter 2026 Operating and Financial Results",
+      "link": "https://www.proqr.com/node/2173337",
+      "date": null,
+      "dateRaw": "Thu, 08/13/2026 - 11:00",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR Prices $50.0 Million Underwritten Registered Direct Offering and Concurrent Private Placement",
+      "link": "https://www.proqr.com/node/2173330",
+      "date": null,
+      "dateRaw": "Thu, 06/25/2026 - 10:35",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR Announces Positive Phase 1 Target Engagement Data for AX-0810, Establishing First Clinical Validation of the Axiomer RNA Editing Platform",
+      "link": "https://www.proqr.com/node/2173329",
+      "date": null,
+      "dateRaw": "Thu, 06/25/2026 - 10:25",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR Announces First Quarter 2026 Operating and Financial Results",
+      "link": "https://www.proqr.com/node/2173327",
+      "date": null,
+      "dateRaw": "Tue, 05/12/2026 - 11:00",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    },
+    {
+      "slug": "proqr",
+      "title": "ProQR Announces Multiple Upcoming Scientific Conference Presentations Highlighting the Breadth of its Axiomer™ RNA Editing Platform",
+      "link": "https://www.proqr.com/node/2173326",
+      "date": null,
+      "dateRaw": "Mon, 05/11/2026 - 12:00",
+      "retrievedAt": "2026-11-14T14:02:41.255100Z"
+    }
+  ],
+  "collection": {
+    "checkedAt": "2026-11-14T14:02:41.255100Z",
+    "added": 70,
+    "checks": [
+      {
+        "slug": "atyr",
+        "ok": true,
+        "count": 10
+      },
+      {
+        "slug": "biocryst",
+        "ok": true,
+        "count": 10
+      },
+      {
+        "slug": "capricor",
+        "ok": true,
+        "count": 10
+      },
+      {
+        "slug": "maat",
+        "ok": true,
+        "count": 10
+      },
+      {
+        "slug": "proqr",
+        "ok": true,
+        "count": 10
+      },
+      {
+        "slug": "sensorion",
+        "ok": false,
+        "error": "Aucun flux récent validé ; contrôle manuel requis."
+      },
+      {
+        "slug": "tiziana",
+        "ok": true,
+        "count": 10
+      },
+      {
+        "slug": "valneva",
+        "ok": true,
+        "count": 10
+      }
+    ],
+    "scope": "Titres et liens RSS uniquement ; fiches financières et cliniques non réanalysées."
+  }
 }
