@@ -12,17 +12,24 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - name: Collecter les communiques officiels
         run: python3 collect_news.py
+      - name: Collecter objectifs, finances et cours du catalogue
+        continue-on-error: true
+        run: node collect_discovery.cjs
       - name: Publier donnees et bilan
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add biotech-data.json
+          if [ -f discovery-data.json ]; then git add discovery-data.json; fi
           if ! git diff --cached --quiet; then
-            git commit -m "Actualisation des communiques et bilan de collecte"
+            git commit -m "Actualisation des communiques et du catalogue biotech"
             git push
           fi
