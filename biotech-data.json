@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-16.1",
+  "version": "2026-11-17.1",
   "asOf": "2026-11-14",
   "sources": {
     "t-fin": {
@@ -1923,8 +1923,8 @@
     }
   ],
   "collection": {
-    "checkedAt": "2026-11-16T22:58:21.320708Z",
-    "added": 1,
+    "checkedAt": "2026-11-17T23:04:44.751368Z",
+    "added": 0,
     "checks": [
       {
         "slug": "atyr",
