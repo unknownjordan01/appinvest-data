@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-18.1",
+  "version": "2026-11-19.1",
   "asOf": "2026-11-14",
   "sources": {
     "t-fin": {
@@ -1354,6 +1354,14 @@
   ],
   "remoteNews": [
     {
+      "slug": "atyr",
+      "title": "aTyr Pharma Presents Preclinical Data for NRP2-Targeting Antibody ATYR2810 at the Connective Tissue Oncology Society (CTOS) 2026 Annual Meeting",
+      "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-presents-preclinical-data-nrp2-targeting-antibody-0",
+      "date": "2026-11-19T12:00:00Z",
+      "dateRaw": "Thu, 19 Nov 2026 07:00:00 -0500",
+      "retrievedAt": "2026-11-19T22:59:18.613321Z"
+    },
+    {
       "slug": "maat",
       "title": "November 16, 2026: MaaT Pharma Reports Financial Results for the Third Quarter 2026",
       "link": "https://www.maatpharma.com/november-16-2026-maat-pharma-reports-financial-results-for-the-third-quarter-2026/",
@@ -1923,8 +1931,8 @@
     }
   ],
   "collection": {
-    "checkedAt": "2026-11-18T23:03:07.687254Z",
-    "added": 0,
+    "checkedAt": "2026-11-19T22:59:18.613321Z",
+    "added": 1,
     "checks": [
       {
         "slug": "atyr",
