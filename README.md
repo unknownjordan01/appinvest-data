@@ -12,3 +12,9 @@ Le lot initial comprend 772 cotations du catalogue, 718 dossiers documentaires e
 Le workflow `Actualiser AppInvest` est prévu du lundi au vendredi à 23 h 17, fuseau `Europe/Paris`. GitHub peut retarder les départs. Il est aussi lançable manuellement et se teste quand sa configuration change. Les données boursières, documentaires et les sources d’actualités supplémentaires sont validées séparément avant publication ; un lot incohérent n’écrase pas le lot public valide précédent.
 
 Les anciennes valeurs datées restent conservées lorsque des sources échouent. Les rapports financiers locaux hors SEC, les clauses de dette, les droits économiques et l’attribution complète des programmes nécessitent encore des vérifications documentaires. Aucun score, pondération ni recommandation d’investissement n’est généré.
+
+## Compléments financiers et consensus
+
+Les bilans annuels sont acceptés lorsque le fournisseur ne propose pas de colonne TTM, avec des dates de cash et de flux distinctes si nécessaire. Les pages KOSDAQ sont utilisées pour les cotations correspondantes. `finance-bridge.cjs` réutilise les observations officielles en conservant les composantes des calculs, leurs devises et périodes : flux annuel publié, TTM exact ou période partielle non extrapolée. Les fonds restreints sont distincts des ressources libres.
+
+`analystConsensus` contient des objectifs complémentaires seulement pour des actions ordinaires américaines avec cotation et données en USD confirmées. Les ADR et devises ambiguës sont exclus. Le nombre d’analystes et la date de publication restent inconnus si le fournisseur ne les précise pas ; aucun chiffre ni date de couverture n’est inventé. Ce champ est séparé de `forecast` pour préserver les anciens clients. Aucun score de risque n’est calculé.

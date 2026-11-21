@@ -6,6 +6,9 @@ on:
     paths:
       - .github/workflows/actualiser.yml
       - collect_extra_news.py
+      - collect_supplements.cjs
+      - finance-bridge.cjs
+      - analyst-provider.cjs
   schedule:
     - cron: '17 23 * * 1-5'
       timezone: Europe/Paris
@@ -36,6 +39,10 @@ jobs:
         continue-on-error: true
         timeout-minutes: 5
         run: node collect_evidence.cjs
+      - name: Completer finances et objectifs documentes
+        continue-on-error: true
+        timeout-minutes: 2
+        run: node collect_supplements.cjs
       - name: Publier donnees et bilan
         run: |
           git config user.name "github-actions[bot]"

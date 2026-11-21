@@ -32,7 +32,7 @@ function parseForecast(html,config,now=new Date().toISOString()){
  const updated=plain.match(/Last updated:\s*([A-Z][a-z]{2} \d{1,2}, \d{4})/),dataDate=updated?englishDay(updated[1]):'';
  return {instrument:config.instrument,currency:config.currency,low,mean,median,high,count,analysts:analysts.slice(0,20),retrievedAt:now,dataDate,url:config.forecastUrl,provider:'Stock Analysis · consensus S&P Global, avis TipRanks',dispersion:high/low>=8};
 }
-function validForecast(v){return object(v)&&str(v.instrument)&&/^[A-Z]{3}$/.test(v.currency)&&['low','mean','median','high'].every(k=>positive(v[k]))&&v.low<=v.median&&v.median<=v.high&&v.low<=v.mean&&v.mean<=v.high&&Number.isInteger(v.count)&&v.count>0&&v.count<=200&&iso(v.retrievedAt)&&(!v.dataDate||day(v.dataDate))&&url(v.url)&&str(v.provider)&&typeof v.dispersion==='boolean'&&Array.isArray(v.analysts)&&v.analysts.length<=20&&v.analysts.every(a=>object(a)&&str(a.firm)&&positive(a.target)&&(a.previous===null||positive(a.previous))&&day(a.date)&&url(a.url));}
+function validForecast(v){return object(v)&&str(v.instrument)&&/^[A-Z]{3}$/.test(v.currency)&&['low','mean','median','high'].every(k=>positive(v[k]))&&v.low<=v.median&&v.median<=v.high&&v.low<=v.mean&&v.mean<=v.high&&(v.count===null||Number.isInteger(v.count)&&v.count>0&&v.count<=200)&&iso(v.retrievedAt)&&(!v.dataDate||day(v.dataDate))&&url(v.url)&&str(v.provider)&&typeof v.dispersion==='boolean'&&Array.isArray(v.analysts)&&v.analysts.length<=20&&v.analysts.every(a=>object(a)&&str(a.firm)&&positive(a.target)&&(a.previous===null||positive(a.previous))&&day(a.date)&&url(a.url));}
 function parseQuote(data,config,now=new Date().toISOString()){
  const m=data?.chart?.result?.[0]?.meta;
  const priceScale=m?.currency==='GBp'&&config.currency==='GBP'?0.01:1;
