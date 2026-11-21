@@ -5,7 +5,7 @@ Ce dépôt contient uniquement des informations publiques sur les sociétés et 
 - `biotech-data.json` : données publiques et communiqués existants.
 - `discovery-data.json` : catalogue et données boursières datées ; sources et couverture variables.
 - `kinara-evidence-index.json` et `evidence-dossiers/` : dossiers indépendants, identité, période, provenance et contrôles SHA-256.
-- `extra-news.json` : titres et liens des sources officielles supplémentaires ; aucune conclusion clinique automatique.
+- `extra-news.json` : titres et liens des sources officielles supplémentaires ; aucune conclusion clinique automatique. Si un flux américain est inaccessible, les dépôts SEC sont proposés en secours avec le libellé explicite « Dépôt SEC » et leur date de dépôt, sans les confondre avec des communiqués.
 
 Le lot initial comprend 772 cotations du catalogue, 718 dossiers documentaires et 70 titres/liens supplémentaires. Ces nombres décrivent une couverture partielle : ils ne constituent pas un score de risque ni une preuve de complétude.
 

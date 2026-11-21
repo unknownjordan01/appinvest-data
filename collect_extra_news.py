@@ -21,18 +21,45 @@ def edenred(raw):
   if len(out)>=50:break
  if not out:raise ValueError('Structure Edenred non reconnue')
  return out
+def fetch_bytes(url):
+ req=urllib.request.Request(url,headers={'User-Agent':'AppInvest-RSS/1.0 (public research; https://github.com/unknownjordan01/appinvest-data)','Accept':'application/rss+xml, application/atom+xml, application/json, application/xml, text/html'})
+ with urllib.request.urlopen(req,timeout=20) as response:raw=response.read(3*1024*1024+1)
+ if len(raw)>3*1024*1024:raise ValueError('Réponse trop volumineuse')
+ return raw
+
+def sec_filings(symbol,fetcher):
+ tickers=json.loads(fetcher('https://www.sec.gov/files/company_tickers.json'));expected={'RERE':'ATRENEW','ALDX':'ALDEYRA'};matches=[v for v in tickers.values() if v.get('ticker')==symbol and expected[symbol] in str(v.get('title','')).upper()]
+ if len(matches)!=1:raise ValueError('Identité SEC non confirmée')
+ cik=str(matches[0]['cik_str']).zfill(10);url='https://data.sec.gov/submissions/CIK'+cik+'.json';data=json.loads(fetcher(url))
+ if str(data.get('cik','')).zfill(10)!=cik:raise ValueError('CIK SEC contradictoire')
+ recent=data.get('filings',{}).get('recent',{});out=[]
+ for i,form in enumerate(recent.get('form',[])):
+  if form not in ['8-K','6-K']:continue
+  acc=recent['accessionNumber'][i];doc=recent['primaryDocument'][i];date=recent['filingDate'][i]
+  if not re.fullmatch(r'\d{10}-\d{2}-\d{6}',acc) or not re.fullmatch(r'[A-Za-z0-9._-]+',doc):continue
+  try:dt.date.fromisoformat(date)
+  except ValueError:continue
+  desc=(recent.get('primaryDocDescription') or ['']*len(recent['form']))[i] or 'Document réglementaire'
+  out.append({'title':'Dépôt SEC '+form+' — '+desc,'link':'https://www.sec.gov/Archives/edgar/data/'+str(int(cik))+'/'+acc.replace('-','')+'/'+doc,'date':date,'dateRaw':date,'origin':'sec_filing','sourceUrl':url,'sourceNote':'Date de dépôt SEC ; distincte de la publication d’un communiqué. Aucune interprétation automatique.'})
+  if len(out)>=20:break
+ if not out:raise ValueError('Aucun dépôt SEC récent exploitable')
+ return out
+
 def collect(old=None,fetcher=None):
  old=old or {};items=dict(old.get('items',{}));report=[];now=dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z')
  for symbol,url in SOURCES.items():
   try:
-   if fetcher:raw=fetcher(url)
-   else:
-    with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Kinara public news collection'}),timeout=20) as response:raw=response.read(3*1024*1024+1)
-   if len(raw)>3*1024*1024:raise ValueError('Réponse trop volumineuse')
-   incoming=edenred(raw) if symbol=='EDEN' else parse_feed(raw,symbol)
+   mode='official_feed' if symbol!='EDEN' else 'official_page';source_error=None
+   try:
+    raw=(fetcher or fetch_bytes)(url)
+    if len(raw)>3*1024*1024:raise ValueError('Réponse trop volumineuse')
+    incoming=edenred(raw) if symbol=='EDEN' else parse_feed(raw,symbol)
+   except Exception as error:
+    if symbol not in ['RERE','ALDX']:raise
+    source_error=str(error)[:300];incoming=sec_filings(symbol,fetcher or fetch_bytes);mode='sec_filings_fallback'
    previous={v['link']:v for v in items.get(symbol,[])}
-   for v in incoming:previous[v['link']]={k:v.get(k) for k in ['title','link','date','dateRaw']}|{'retrievedAt':now}
-   items[symbol]=sorted(previous.values(),key=lambda v:v.get('date') or '',reverse=True)[:100];report.append({'symbol':symbol,'ok':True,'received':len(incoming)})
+   for v in incoming:previous[v['link']]={k:v[k] for k in ['title','link','date','dateRaw','origin','sourceUrl','sourceNote'] if k in v}|{'retrievedAt':now}
+   items[symbol]=sorted(previous.values(),key=lambda v:v.get('date') or '',reverse=True)[:100];report.append({'symbol':symbol,'ok':True,'received':len(incoming),'mode':mode,'primaryError':source_error})
   except Exception as e:report.append({'symbol':symbol,'ok':False,'error':str(e)[:300]})
  return {'format':'kinara-official-news','version':1,'generatedAt':now,'sources':SOURCES,'items':items,'report':report}
 if __name__=='__main__':

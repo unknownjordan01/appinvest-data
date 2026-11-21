@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/actualiser.yml
+      - collect_extra_news.py
   schedule:
     - cron: '17 23 * * 1-5'
       timezone: Europe/Paris
