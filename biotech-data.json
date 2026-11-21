@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-20.1",
+  "version": "2026-11-21.1",
   "asOf": "2026-11-14",
   "sources": {
     "t-fin": {
@@ -1354,6 +1354,14 @@
   ],
   "remoteNews": [
     {
+      "slug": "capricor",
+      "title": "Capricor Therapeutics Provides Regulatory Update on Deramiocel BLA for Duchenne Muscular Dystrophy",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/360/capricor-therapeutics-provides-regulatory-update-on",
+      "date": "2026-11-21T00:55:00Z",
+      "dateRaw": "Fri, 20 Nov 26 19:55:00 -0500",
+      "retrievedAt": "2026-11-21T18:16:26.514952Z"
+    },
+    {
       "slug": "atyr",
       "title": "aTyr Pharma Presents Preclinical Data for NRP2-Targeting Antibody ATYR2810 at the Connective Tissue Oncology Society (CTOS) 2026 Annual Meeting",
       "link": "https://investors.atyrpharma.com/news-releases/news-release-details/atyr-pharma-presents-preclinical-data-nrp2-targeting-antibody-0",
@@ -1931,8 +1939,8 @@
     }
   ],
   "collection": {
-    "checkedAt": "2026-11-20T22:58:47.203409Z",
-    "added": 0,
+    "checkedAt": "2026-11-21T18:16:26.514952Z",
+    "added": 1,
     "checks": [
       {
         "slug": "atyr",
