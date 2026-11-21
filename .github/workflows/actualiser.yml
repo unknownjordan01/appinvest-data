@@ -1,6 +1,10 @@
 name: Actualiser AppInvest
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/actualiser.yml
   schedule:
     - cron: '17 23 * * 1-5'
       timezone: Europe/Paris
@@ -12,7 +16,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,6 +24,10 @@ jobs:
           node-version: "22"
       - name: Collecter les communiques officiels
         run: python3 collect_news.py
+      - name: Collecter les nouvelles sources officielles
+        continue-on-error: true
+        timeout-minutes: 2
+        run: python3 collect_extra_news.py
       - name: Collecter objectifs, finances et cours du catalogue
         continue-on-error: true
         run: node collect_discovery.cjs
@@ -32,8 +40,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add biotech-data.json
-          if [ -f discovery-data.json ]; then git add discovery-data.json; fi
-          if [ -f kinara-evidence.json ]; then git add kinara-evidence.json; fi
+          if [ -f discovery-data.json ] && node validate_public.cjs market; then git add discovery-data.json; fi
+          if [ -f kinara-evidence-index.json ] && node validate_public.cjs evidence; then git add kinara-evidence-index.json evidence-dossiers; fi
+          if [ -f extra-news.json ] && node validate_public.cjs news; then git add extra-news.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "Actualisation des communiques et du catalogue biotech"
             git push
