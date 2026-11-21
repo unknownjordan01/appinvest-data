@@ -42,16 +42,37 @@ function parseStockFinancial(balance,cashflow,row,now=new Date().toISOString()){
  const b=extract(balance,true),f=extract(cashflow,false);if(b.currency!==f.currency)throw Error('Devises des comptes différentes');const get=(x,k)=>magnitude(x.rows.find(r=>r[0]===k)?.[1]),cash=get(b,'Cash & Short-Term Investments')??get(b,'Cash & Equivalents'),ocf=get(f,'Operating Cash Flow');if(cash===null||cash<0||ocf===null)throw Error('Flux ou liquidités absents');const cfg=config(row);
  return {cash:cash*1e6,operatingCashFlow:ocf*1e6,currency:b.currency,asOf:b.asOf,flowAsOf:f.asOf,months:12,separatePeriods:true,indicativeMonths:null,retrievedAt:now,url:cfg.base+'financials/cash-flow-statement/',balanceUrl:cfg.base+'financials/balance-sheet/',note:'Données agrégées S&P Global via Stock Analysis. Liquidités au '+b.asOf+' ; flux opérationnel de l’exercice annuel clos le '+f.asOf+'. Périodes distinctes : aucun ratio d’autonomie calculé. Devise des comptes : '+b.currency+'.'};
 }
+const sessionFormats=new Map();
 function dailyRank(rows,details,mode,now=Date.now()){
  const eligible=[];
- for(const r of rows){const d=details[r.key],q=d?.day,usd=G.capUSD(r,d);if(!q||!C.iso(q.at)||!Number.isFinite(q.dailyChange)||!C.positive(usd)||C.age(q.at,now)<-0.004||C.age(q.at,now)>4||C.age(q.retrievedAt,now)<-0.004||C.age(q.retrievedAt,now)>1||q.splits?.length)continue;
+ for(const r of rows){const d=details[r.key],q=d?.day,usd=G.capUSD(r,d);if(!q||!C.iso(q.at)||!Number.isFinite(q.dailyChange)||!C.positive(usd)||C.age(q.at,now)<-0.004||C.age(q.at,now)>4||C.age(q.retrievedAt,now)<-0.004||C.age(q.retrievedAt,now)>4||q.splits?.length)continue;
  if(r.global&&(!C.iso(r.capAsOf)||C.age(r.capAsOf,now)>30))continue;
  if(!r.global&&r.currency==='EUR'&&(!C.iso(d.fx?.at)||C.age(d.fx.at,now)>4))continue;
  if(usd<1e7||usd>5e9||mode==='fr'&&r.region!=='FR')continue;eligible.push({...r,q,capUSD:usd});
  }
- const dates={};const session=r=>new Date(r.q.at).toLocaleDateString('sv-SE',{timeZone:G.markets[r.region].zone});for(const r of eligible){const d=session(r);if(!dates[r.region]||d>dates[r.region])dates[r.region]=d;}
+ // A lone newly refreshed quote must not evict the rest of a market.
+ const dates={},counts={};const session=r=>{const zone=G.markets[r.region].zone;if(!sessionFormats.has(zone))sessionFormats.set(zone,new Intl.DateTimeFormat('sv-SE',{timeZone:zone}));return sessionFormats.get(zone).format(new Date(r.q.at));};for(const r of eligible){const d=session(r),region=r.region;counts[region]??={};counts[region][d]=(counts[region][d]||0)+1;}for(const [region,days]of Object.entries(counts))dates[region]=Object.keys(days).sort((a,b)=>days[b]-days[a]||b.localeCompare(a))[0];
  const seen=new Set();return eligible.filter(r=>session(r)===dates[r.region]).sort((a,b)=>b.q.dailyChange-a.q.dailyChange).filter(r=>{const key=r.issuerKey||r.key;if(seen.has(key))return false;seen.add(key);return true;});
 }
+
+// Calendar horizons; short IPO histories and unadjusted split histories cannot stand in for a year.
+function periodReturns(h){
+ const points=h.points||[],last=points.at(-1),base={key:h.key,currency:h.currency,retrievedAt:h.retrievedAt,at:last?.at||h.at,url:h.url,adjusted:!!h.adjusted,six:null,year:null};
+ if(!last||(!h.adjusted&&h.splits?.length))return base;
+ for(const [key,months]of [['six',6],['year',12]]){const target=new Date(last.at),day=target.getUTCDate();target.setUTCDate(1);target.setUTCMonth(target.getUTCMonth()-months);const lastDay=new Date(Date.UTC(target.getUTCFullYear(),target.getUTCMonth()+1,0)).getUTCDate();target.setUTCDate(Math.min(day,lastDay));let first=null;
+ for(const p of points)if(!first||Math.abs(Date.parse(p.at)-target)<Math.abs(Date.parse(first.at)-target))first=p;
+ if(first&&first.at<last.at&&Math.abs(Date.parse(first.at)-target)<=7*86400000)base[key]={percent:(last.close/first.close-1)*100,from:first.at,to:last.at};
+ }return base;
+}
+function sponsorName(name){return String(name||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').replace(/(?:\s+(?:incorporated|inc|corporation|corp|limited|ltd|pty|plc|sa|se|nv|bv|ag|co|gmbh|sarl|n v|b v|s a|s e|s a s|societe anonyme))+\s*$/g,'').trim();}
+function parseClinical(raw,row,now=new Date().toISOString()){
+ const name=sponsorName(row.name);if(name.length<4||!Array.isArray(raw?.studies)||raw.studies.length>100)throw Error('Registre : réponse ou promoteur non confirmé');
+ const trials=[];for(const study of raw.studies){const p=study.protocolSection,s=p?.statusModule,sp=p?.sponsorCollaboratorsModule?.leadSponsor?.name,id=p?.identificationModule?.nctId;
+ if(sponsorName(sp)!==name||!/^NCT\d{8}$/.test(id||'')||!['RECRUITING','ACTIVE_NOT_RECRUITING','NOT_YET_RECRUITING','ENROLLING_BY_INVITATION'].includes(s?.overallStatus))continue;
+ const phases=(p.designModule?.phases||[]).filter(v=>['EARLY_PHASE1','PHASE1','PHASE2','PHASE3','PHASE4'].includes(v));if(!phases.length)continue;
+ trials.push({id,title:String(p.identificationModule.briefTitle||id).slice(0,600),sponsor:String(sp).slice(0,300),phases,status:s.overallStatus,primaryCompletion:s.primaryCompletionDateStruct?.date||'',completionType:s.primaryCompletionDateStruct?.type||'',updated:s.lastUpdatePostDateStruct?.date||'',interventions:(p.armsInterventionsModule?.interventions||[]).map(i=>String(i.name).slice(0,200)).slice(0,10),url:'https://clinicaltrials.gov/study/'+id});}
+ return {key:row.key,queryName:row.name,retrievedAt:now,truncated:!!raw.nextPageToken,trials:trials.slice(0,20)};
+}
 function measure(points,a,b){if(!points.length)return null;a=Math.max(0,Math.min(points.length-1,a));b=Math.max(0,Math.min(points.length-1,b));return {from:points[a],to:points[b],percent:(points[b].close/points[a].close-1)*100};}
-return {france,tables,magnitude,parseUniverse,config,parseHistory,parseStats,parseFinancial,parseStockFinancial,dailyRank,measure};
+return {france,tables,magnitude,parseUniverse,config,parseHistory,parseStats,parseFinancial,parseStockFinancial,dailyRank,measure,periodReturns,sponsorName,parseClinical};
 });
