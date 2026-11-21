@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/unknownjordan01/appinvest-data/kinara-evidence-bundle.schema.json",
+  "title": "Kinara public documentary bundle v1",
+  "type": "object",
+  "required": ["format", "version", "generatedAt", "records"],
+  "properties": {
+    "format": {"const": "kinara-evidence-bundle"},
+    "version": {"const": 1},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "records": {"type": "object", "maxProperties": 100, "additionalProperties": {"$ref": "kinara-evidence.schema.json"}},
+    "issuerIndex": {"type": "object"},
+    "report": {"type": "object"}
+  },
+  "additionalProperties": false
+}

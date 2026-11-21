@@ -23,12 +23,17 @@ jobs:
       - name: Collecter objectifs, finances et cours du catalogue
         continue-on-error: true
         run: node collect_discovery.cjs
+      - name: Collecter les dossiers documentaires publics
+        continue-on-error: true
+        timeout-minutes: 5
+        run: node collect_evidence.cjs
       - name: Publier donnees et bilan
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add biotech-data.json
           if [ -f discovery-data.json ]; then git add discovery-data.json; fi
+          if [ -f kinara-evidence.json ]; then git add kinara-evidence.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "Actualisation des communiques et du catalogue biotech"
             git push

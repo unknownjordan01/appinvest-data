@@ -1,0 +1,671 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/unknownjordan01/appinvest-data/kinara-evidence.schema.json",
+  "title": "Kinara evidence dossier v1 — no risk score",
+  "type": "object",
+  "required": [
+    "format",
+    "version",
+    "key",
+    "issuer",
+    "listings",
+    "retrievedAt",
+    "sources",
+    "observations",
+    "assets",
+    "indications",
+    "programs",
+    "trials",
+    "results",
+    "regulatory",
+    "events",
+    "documents",
+    "issues"
+  ],
+  "properties": {
+    "format": {
+      "const": "kinara-evidence"
+    },
+    "version": {
+      "const": 1
+    },
+    "key": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "issuer": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "cik"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "cik": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9]{10}$"
+        }
+      }
+    },
+    "retrievedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "availability": {
+      "type": "object"
+    },
+    "coverage": {
+      "type": "object"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sources"
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/observations"
+      }
+    },
+    "listings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/listings"
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/assets"
+      }
+    },
+    "indications": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/indications"
+      }
+    },
+    "programs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/programs"
+      }
+    },
+    "trials": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/trials"
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/results"
+      }
+    },
+    "regulatory": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/regulatory"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/events"
+      }
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/documents"
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/issues"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "sources": {
+      "type": "object",
+      "required": [
+        "id",
+        "url",
+        "kind",
+        "retrievedAt",
+        "verifiedAt",
+        "documentDate"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "documentDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrievedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "verifiedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verification": {
+          "type": "string"
+        },
+        "retrievalMethod": {
+          "type": "string"
+        },
+        "publicationText": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "observations": {
+      "type": "object",
+      "required": [
+        "id",
+        "field",
+        "value",
+        "status",
+        "unit",
+        "period",
+        "asOf",
+        "sourceId",
+        "kind",
+        "scope"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "field": {
+          "type": "string"
+        },
+        "value": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "object",
+            "array",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "available",
+            "not_collected",
+            "not_published",
+            "not_applicable",
+            "old",
+            "conflicting",
+            "error"
+          ]
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "period": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date"
+            },
+            "end": {
+              "type": "string",
+              "format": "date"
+            },
+            "days": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "start",
+            "end"
+          ]
+        },
+        "asOf": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        },
+        "scope": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "verifiedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "available"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "not": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "listings": {
+      "type": "object",
+      "required": [
+        "id",
+        "key",
+        "symbol",
+        "region",
+        "adrRatio"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "adrRatio": {
+          "type": [
+            "number",
+            "object",
+            "null"
+          ]
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "sourceId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        }
+      }
+    },
+    "indications": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "sourceId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        }
+      }
+    },
+    "programs": {
+      "type": "object",
+      "required": [
+        "id",
+        "assetId",
+        "indicationId",
+        "name",
+        "stage",
+        "status",
+        "rights",
+        "sourceId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "assetId": {
+          "type": "string"
+        },
+        "indicationId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "stage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rights": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        }
+      }
+    },
+    "trials": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "assetIds",
+        "programIds",
+        "sourceId",
+        "registryRetrieved"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^NCT[0-9]{8}$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "assetIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "programIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "indicationIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        },
+        "registryRetrieved": {
+          "type": "boolean"
+        },
+        "phases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "population": {
+          "type": "object"
+        },
+        "design": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "enrollment": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "resultsExpected": {
+          "type": [
+            "object",
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "results": {
+      "type": "object",
+      "required": [
+        "id",
+        "trialId",
+        "sourceId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "trialId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        },
+        "maturity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cutoffDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "interpretation": {
+          "type": "null"
+        }
+      }
+    },
+    "regulatory": {
+      "type": "object",
+      "required": [
+        "id",
+        "sourceId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        },
+        "nature": {
+          "type": "string"
+        },
+        "programIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "sourceId",
+        "history"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        },
+        "date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "history": {
+          "type": "array"
+        }
+      }
+    },
+    "documents": {
+      "type": "object",
+      "required": [
+        "id",
+        "sourceId",
+        "form",
+        "filed"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Must reference sources[].id; application validator checks referential integrity."
+        },
+        "form": {
+          "type": "string"
+        },
+        "filed": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "issues": {
+      "type": "object",
+      "required": [
+        "domain",
+        "type",
+        "message",
+        "at"
+      ],
+      "properties": {
+        "domain": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "at": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
