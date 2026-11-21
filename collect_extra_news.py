@@ -28,10 +28,13 @@ def fetch_bytes(url):
  return raw
 
 def sec_filings(symbol,fetcher):
- tickers=json.loads(fetcher('https://www.sec.gov/files/company_tickers.json'));expected={'RERE':'ATRENEW','ALDX':'ALDEYRA'};matches=[v for v in tickers.values() if v.get('ticker')==symbol and expected[symbol] in str(v.get('title','')).upper()]
- if len(matches)!=1:raise ValueError('Identité SEC non confirmée')
- cik=str(matches[0]['cik_str']).zfill(10);url='https://data.sec.gov/submissions/CIK'+cik+'.json';data=json.loads(fetcher(url))
- if str(data.get('cik','')).zfill(10)!=cik:raise ValueError('CIK SEC contradictoire')
+ # Public SEC issuer IDs verified against its official ticker registry.
+ cik={'RERE':'0001838957','ALDX':'0001341235'}[symbol]
+ expected={'RERE':'ATRENEW','ALDX':'ALDEYRA'}
+ url='https://data.sec.gov/submissions/CIK'+cik+'.json'
+ data=json.loads(fetcher(url))
+ if str(data.get('cik','')).zfill(10)!=cik or symbol not in data.get('tickers',[]) or expected[symbol] not in str(data.get('name','')).upper():
+  raise ValueError('Identité émetteur SEC contradictoire')
  recent=data.get('filings',{}).get('recent',{});out=[]
  for i,form in enumerate(recent.get('form',[])):
   if form not in ['8-K','6-K']:continue
