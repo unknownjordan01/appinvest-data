@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-21.4",
+  "version": "2026-11-23.1",
   "asOf": "2026-11-14",
   "sources": {
     "t-fin": {
@@ -1355,6 +1355,14 @@
   "remoteNews": [
     {
       "slug": "capricor",
+      "title": "Capricor Therapeutics Reschedules Conference Call to Provide Deramiocel Update",
+      "link": "https://www.capricor.com/investors/news-events/press-releases/detail/361/capricor-therapeutics-reschedules-conference-call-to",
+      "date": "2026-11-23T11:30:00Z",
+      "dateRaw": "Mon, 23 Nov 26 06:30:00 -0500",
+      "retrievedAt": "2026-11-23T23:05:52.758480Z"
+    },
+    {
+      "slug": "capricor",
       "title": "Capricor Therapeutics Provides Regulatory Update on Deramiocel BLA for Duchenne Muscular Dystrophy",
       "link": "https://www.capricor.com/investors/news-events/press-releases/detail/360/capricor-therapeutics-provides-regulatory-update-on",
       "date": "2026-11-21T00:55:00Z",
@@ -1939,8 +1947,8 @@
     }
   ],
   "collection": {
-    "checkedAt": "2026-11-21T20:42:28.313489Z",
-    "added": 0,
+    "checkedAt": "2026-11-23T23:05:52.758480Z",
+    "added": 1,
     "checks": [
       {
         "slug": "atyr",
