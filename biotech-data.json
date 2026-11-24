@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-23.1",
+  "version": "2026-11-24.1",
   "asOf": "2026-11-14",
   "sources": {
     "t-fin": {
@@ -1354,6 +1354,14 @@
   ],
   "remoteNews": [
     {
+      "slug": "valneva",
+      "title": "Valneva Reports Nine-Month 2026 Financial Results and Provides Corporate Updates",
+      "link": "https://valneva.com/press-release/valneva-reports-nine-month-2026-financial-results-and-provides-corporate-updates/",
+      "date": "2026-11-24T06:00:22Z",
+      "dateRaw": "Tue, 24 Nov 2026 06:00:22 +0000",
+      "retrievedAt": "2026-11-24T23:09:31.450945Z"
+    },
+    {
       "slug": "capricor",
       "title": "Capricor Therapeutics Reschedules Conference Call to Provide Deramiocel Update",
       "link": "https://www.capricor.com/investors/news-events/press-releases/detail/361/capricor-therapeutics-reschedules-conference-call-to",
@@ -1947,7 +1955,7 @@
     }
   ],
   "collection": {
-    "checkedAt": "2026-11-23T23:05:52.758480Z",
+    "checkedAt": "2026-11-24T23:09:31.450945Z",
     "added": 1,
     "checks": [
       {
