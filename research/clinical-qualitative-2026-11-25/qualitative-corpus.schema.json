@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kinara qualitative clinical research complement",
+  "type": "object",
+  "required": [
+    "format",
+    "schema_version",
+    "methodology",
+    "sources",
+    "prior_observations",
+    "readouts",
+    "previous_archive_audit"
+  ],
+  "properties": {
+    "format": {
+      "const": "kinara.clinical.qualitative-corpus"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "id",
+          "url",
+          "document_date",
+          "access"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "document_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "raw_document_archived": {
+            "const": false
+          }
+        }
+      }
+    },
+    "prior_observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "family",
+          "source_id",
+          "signal",
+          "limitations",
+          "measurements"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "measurements": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "readouts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "family_group",
+          "trial",
+          "event",
+          "prediction_input_snapshot",
+          "labels",
+          "missing_data",
+          "inclusion"
+        ],
+        "properties": {
+          "labels": {
+            "type": "object",
+            "required": [
+              "primary_endpoint_status",
+              "clinical_signal",
+              "confidence"
+            ],
+            "properties": {
+              "primary_endpoint_status": {
+                "enum": [
+                  "met",
+                  "not_met",
+                  "pending"
+                ]
+              },
+              "clinical_signal": {
+                "enum": [
+                  "positive",
+                  "negative",
+                  "mixed",
+                  "indeterminate"
+                ]
+              },
+              "market_reaction": {
+                "type": "null"
+              }
+            }
+          },
+          "inclusion": {
+            "type": "object",
+            "properties": {
+              "automatic_training_enabled": {
+                "const": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

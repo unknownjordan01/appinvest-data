@@ -1,0 +1,53 @@
+{
+  "validated_on": "2026-11-25",
+  "runtime": "JavaScript orchestration runtime",
+  "result": {
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "pending": 1,
+      "not_met": 10,
+      "met": 9
+    },
+    "readouts": 20,
+    "priors": 18,
+    "families": 14,
+    "sources": 32
+  },
+  "guard_tests": [
+    {
+      "test": "duplicate_readout_rejected",
+      "passed": true
+    },
+    {
+      "test": "same_day_or_future_prior_rejected",
+      "passed": true
+    },
+    {
+      "test": "interim_not_final_binary_label",
+      "passed": true
+    },
+    {
+      "test": "broken_prior_reference_rejected",
+      "passed": true
+    }
+  ],
+  "not_executed": [
+    "training",
+    "predictive_evaluation",
+    "JSON_schema_engine",
+    "Windows_Electron",
+    "merge_with_previous_zip",
+    "raw_source_hash_verification"
+  ],
+  "archive_checks": {
+    "entries": 5,
+    "local_headers": true,
+    "central_directory": true,
+    "crc32": true,
+    "payload_bytes_equal_sources": true,
+    "base64_roundtrip": true,
+    "archive_opened_with_external_unzip": false,
+    "validation_scope": "ZIP layout and CRC32 against final source payloads; external unzip not run"
+  }
+}

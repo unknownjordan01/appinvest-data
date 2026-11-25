@@ -1,0 +1,3086 @@
+{
+  "format": "kinara.clinical.qualitative-corpus",
+  "schema_version": "1.0.0",
+  "created_on": "2026-11-25",
+  "language": "fr",
+  "status": "documentary_research_complement_not_trained",
+  "scope": {
+    "readout_records": 20,
+    "molecule_groups": 14,
+    "prior_observations": 18,
+    "primary_source_documents": 32,
+    "overlap_with_previous_corpus": "unverified",
+    "app_installation_required": false,
+    "app_data_update_integrated": false
+  },
+  "methodology": {
+    "prediction_question": "Prévoir la qualification d'un prochain résultat à partir d'informations connues avant sa publication.",
+    "prediction_time": "Avant l'annonce cible, pas nécessairement avant le début de l'essai. Ne remplace pas les anciens critères de constitution du noyau strict.",
+    "target_definition": "Atteinte du critère principal annoncée à une coupure définie. Ce label n'est ni une autorisation réglementaire ni une certitude sur l'efficacité finale du médicament.",
+    "documentary_inclusion": "Identité de l'essai, date de l'annonce et document primaire consulté. Les champs absents restent absents et leur motif est conservé.",
+    "evidence_tiers": {
+      "strict_reference": "Ancien corpus à préserver, non réévalué dans ce complément.",
+      "partial_feature_candidate": "Résultat annoncé explicite et au moins une observation antérieure datée. Entrées partielles autorisées, sous contrôle temporel.",
+      "interim_only": "Signal intermédiaire utilisable pour documentation ou prédiction d'une étape suivante; exclu du label final binaire."
+    },
+    "missingness_policy": "null et not_collected/not_verified signifient information absente ou vérification non faite. Aucune imputation comme zéro, échec ou neutralité.",
+    "previous_signal_policy": "Distinguer signal ouvert, signal contrôlé isolé, réplication sur un essai distinct, sous-groupe post hoc et échec du critère principal. Une seconde publication ou réanalyse du même essai ne constitue pas une réplication.",
+    "confidence_policy": "Fiabilité du document, certitude du label et solidité clinique séparées. Aucun poids numérique de confiance inventé.",
+    "temporal_policy": "Un résultat, une décision ou une variation boursière après annonce ne peut servir d'entrée pour prévoir cette même annonce. Les annonces du même jour sont exclues des antécédents sans ordre horaire prouvé.",
+    "input_allowlist": [
+      "prediction_input_snapshot.prior_signal_state",
+      "prior_observations[ids autorisés].signal",
+      "prior_observations[ids autorisés].design",
+      "prior_observations[ids autorisés].measurements",
+      "prior_observations[ids autorisés].limitations"
+    ],
+    "prohibited_inputs": [
+      "labels",
+      "documentary_context",
+      "prior_signal_confirmation_after_event",
+      "company_after_event_decisions",
+      "market_reaction_after_event",
+      "source_text_of_target_announcement"
+    ],
+    "data_split": "Regrouper par molécule, y compris formulations, indications et sociétés acquéreuses; séparation temporelle des évaluations. Les liens vers des essais d'une famille réservée à l'évaluation restent réservés avec cette famille.",
+    "evaluation_plan": "Comparer référence sans ce complément et variante avec dossiers partiels sur un même jeu d'évaluation vérifié. Tester calibration, discrimination et stabilité par indication. Aucun pourcentage prédictif avant validation hors apprentissage.",
+    "sampling_limit": "Sélection documentaire de cas connus, non représentative des taux de réussite. Ne pas estimer un taux de base à partir de ce lot.",
+    "automation_limit": "Aucune collecte automatique, intégration dans l'application ou mise à jour du modèle activée par ce fichier.",
+    "raw_evidence_limit": "Liens, métadonnées et observations paraphrasées conservés. Les PDF/HTML bruts et leurs versions historiques ne sont pas archivés.",
+    "interpretation_limit": "Les catégories qualitatives sont des annotations de lecture. Elles ne constituent pas une expertise indépendante confirmant les conclusions du promoteur."
+  },
+  "sources": {
+    "PTX_D24": {
+      "id": "PTX_D24",
+      "document_date": "2026-11-25",
+      "public_availability_date": "2026-11-25",
+      "date_precision": "day",
+      "publisher": "Prescient Therapeutics",
+      "type": "company_announcement",
+      "url": "https://asx.api.cmfyapp.com/asx-research/1.0/file/2924-03166178-3A707352%26v%3Dundefined",
+      "title": "PTX-100 phase 2a dose review",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn924122596view2",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "PTX_2023": {
+      "id": "PTX_2023",
+      "document_date": "2023-12-11",
+      "public_availability_date": "2023-12-11",
+      "date_precision": "day",
+      "publisher": "Prescient Therapeutics",
+      "type": "company_announcement",
+      "url": "https://company-announcements.afr.com/asx/ptx/d072b8df-97a3-11ee-81a4-b28047b5c3bb.pdf",
+      "title": "PTX-100 phase 1b",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn903499161view0",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "PTX_2026": {
+      "id": "PTX_2026",
+      "document_date": "2026-02-24",
+      "public_availability_date": null,
+      "date_precision": "day",
+      "publisher": "Prescient Therapeutics",
+      "type": "company_report",
+      "url": "https://investorpa.com/announcement-pdf/20260224/260531.pdf",
+      "title": "Interim report for period ending 2025-12-31",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn903499161view4",
+      "access": "relevant_report_sections",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_report_retrieved_today",
+      "historical_snapshot_verified": false,
+      "availability_note": "Rapport signé le 24/02/2026, hébergé sous une URL datée. Date de mise en ligne non vérifiée indépendamment."
+    },
+    "AMLX_PHOENIX": {
+      "id": "AMLX_PHOENIX",
+      "document_date": "2024-03-08",
+      "public_availability_date": "2024-03-08",
+      "date_precision": "day",
+      "publisher": "Amylyx Pharmaceuticals",
+      "type": "company_announcement_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1658551/000119312524062878/d787565dex991.htm",
+      "title": "PHOENIX topline",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn520505159view0",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "AMLX_CENTAUR": {
+      "id": "AMLX_CENTAUR",
+      "document_date": "2020-12-09",
+      "public_availability_date": "2020-12-09",
+      "date_precision": "day",
+      "publisher": "Amylyx Pharmaceuticals",
+      "type": "company_announcement",
+      "url": "https://www.amylyx.com/news/amylyx-pharmaceuticals-to-present-positive-functional-and-survival-data-and-new-predictive-modeling-results-from-the-centaur-trial-in-people-with-als-at-the-31st-international-symposium-on-als-mnd",
+      "title": "CENTAUR and extension results",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn839140816view2",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "ATHA_LIFT": {
+      "id": "ATHA_LIFT",
+      "document_date": "2024-09-03",
+      "public_availability_date": "2024-09-03",
+      "date_precision": "day",
+      "publisher": "Athira Pharma",
+      "type": "company_announcement",
+      "url": "https://investors.athira.com/node/10061/pdf",
+      "title": "LIFT-AD topline",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn520505159view2",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "ATHA_ACT": {
+      "id": "ATHA_ACT",
+      "document_date": "2022-08-15",
+      "public_availability_date": "2022-08-15",
+      "date_precision": "day",
+      "publisher": "Athira Pharma",
+      "type": "company_announcement_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1620463/000095017022017392/atha-ex99_1.htm",
+      "title": "Q2 2022 update including ACT-AD",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn464453301view3",
+      "access": "relevant_announcement_sections",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "SAVA_RETHINK": {
+      "id": "SAVA_RETHINK",
+      "document_date": "2024-11-25",
+      "public_availability_date": "2024-11-25",
+      "date_precision": "day",
+      "publisher": "Cassava Sciences",
+      "type": "company_announcement_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1069530/000117184324006545/exh_991.htm",
+      "title": "ReThink-ALZ topline",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn520505159view1",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "SAVA_OL": {
+      "id": "SAVA_OL",
+      "document_date": "2023-01-24",
+      "public_availability_date": "2023-01-24",
+      "date_precision": "day",
+      "publisher": "Cassava Sciences",
+      "type": "company_announcement",
+      "url": "https://www.globenewswire.com/news-release/2023/01/24/2594355/8339/en/cassava-sciences-announces-positive-top-line-clinical-results-in-phase-2-study-evaluating-simufilam-in-alzheimer-s-disease.html",
+      "title": "Open-label simufilam results",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn839140816view4",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "SAVA_CMS": {
+      "id": "SAVA_CMS",
+      "document_date": "2023-07-05",
+      "public_availability_date": "2023-07-05",
+      "date_precision": "day",
+      "publisher": "Cassava Sciences",
+      "type": "company_announcement_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1069530/000117184323004330/exh_991.htm",
+      "title": "Cognition Maintenance Study",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn464453301view4",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "KRTX_E2": {
+      "id": "KRTX_E2",
+      "document_date": "2022-08-08",
+      "public_availability_date": "2022-08-08",
+      "date_precision": "day",
+      "publisher": "Karuna Therapeutics",
+      "type": "company_announcement_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1771917/000119312522214126/d367196dex991.htm",
+      "title": "EMERGENT-2 topline",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn600846458view2",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "KRTX_E3": {
+      "id": "KRTX_E3",
+      "document_date": "2023-03-20",
+      "public_availability_date": "2023-03-20",
+      "date_precision": "day",
+      "publisher": "Karuna Therapeutics",
+      "type": "company_announcement_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1771917/000095017023008684/krtx-ex99_1.htm",
+      "title": "EMERGENT-3 topline",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn600846458view1",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "KRTX_E1": {
+      "id": "KRTX_E1",
+      "document_date": "2020-03-24",
+      "public_availability_date": "2020-03-24",
+      "date_precision": "day",
+      "publisher": "Karuna Therapeutics",
+      "type": "company_announcement_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1771917/000119312520083104/d886118dex991.htm",
+      "title": "2019 results update including EMERGENT-1",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn924122596view0",
+      "access": "relevant_announcement_sections",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "ABBV_EM": {
+      "id": "ABBV_EM",
+      "document_date": "2024-11-11",
+      "public_availability_date": "2024-11-11",
+      "date_precision": "day",
+      "publisher": "AbbVie",
+      "type": "company_announcement",
+      "url": "https://news.abbvie.com/2024-11-11-AbbVie-Provides-Update-on-Phase-2-Results-for-Emraclidine-in-Schizophrenia",
+      "title": "EMPOWER-1 and EMPOWER-2",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn600846458view3",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "CERE_P1B": {
+      "id": "CERE_P1B",
+      "document_date": "2021-06-29",
+      "public_availability_date": "2021-06-29",
+      "date_precision": "day",
+      "publisher": "Cerevel Therapeutics",
+      "type": "company_announcement",
+      "url": "https://news.abbvie.com/2021-06-29-Cerevel-Therapeutics-Announces-Positive-Topline-Results-for-CVL-231-in-Phase-1b-Clinical-Trial-in-Patients-with-Schizophrenia",
+      "title": "CVL-231 phase 1b",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn828674283view2",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "APLS_OAKS_DERBY": {
+      "id": "APLS_OAKS_DERBY",
+      "document_date": "2021-09-09",
+      "public_availability_date": "2021-09-09",
+      "date_precision": "day",
+      "publisher": "Apellis Pharmaceuticals",
+      "type": "company_report",
+      "url": "https://investors.apellis.com/static-files/e186a7df-cc00-4b41-9358-d082dfbbfe16",
+      "title": "8-K describing OAKS and DERBY",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn600846458view0",
+      "access": "relevant_report_sections",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_report_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "APLS_FILLY": {
+      "id": "APLS_FILLY",
+      "document_date": "2019-07-16",
+      "public_availability_date": "2019-07-16",
+      "date_precision": "day",
+      "publisher": "Liao et al., Ophthalmology",
+      "type": "primary_research",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31474439/",
+      "title": "FILLY randomized phase 2",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn924122596view1",
+      "access": "abstract_and_publication_metadata",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "publication_metadata",
+      "historical_snapshot_verified": false
+    },
+    "AXSM_2024": {
+      "id": "AXSM_2024",
+      "document_date": "2024-12-30",
+      "public_availability_date": "2024-12-30",
+      "date_precision": "day",
+      "publisher": "Axsome Therapeutics",
+      "type": "company_announcement",
+      "url": "https://www.axsome.com/news/axsome-therapeutics-announces-successful-completion-and-resu-11741",
+      "title": "ACCORD-2 and ADVANCE-2 topline",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn520505159view4",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "AXSM_ADV1": {
+      "id": "AXSM_ADV1",
+      "document_date": "2020-04-27",
+      "public_availability_date": "2020-04-27",
+      "date_precision": "day",
+      "publisher": "Axsome Therapeutics",
+      "type": "company_announcement",
+      "url": "https://www.globenewswire.com/news-release/2020/04/27/2022249/0/en/Axsome-Therapeutics-Announces-AXS-05-Achieves-Primary-Endpoint-in-the-ADVANCE-1-Pivotal-Phase-2-3-Trial-in-Alzheimer-s-Disease-Agitation.html",
+      "title": "ADVANCE-1 phase 2/3",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn828674283view4",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "AXSM_ACC1": {
+      "id": "AXSM_ACC1",
+      "document_date": "2022-11-28",
+      "public_availability_date": "2022-11-28",
+      "date_precision": "day",
+      "publisher": "Axsome Therapeutics",
+      "type": "company_announcement_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1579428/000095017022025706/axsm-ex99_1.htm",
+      "title": "ACCORD randomized withdrawal",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn828674283view5",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "MDGL_P3": {
+      "id": "MDGL_P3",
+      "document_date": "2022-12-19",
+      "public_availability_date": "2022-12-19",
+      "date_precision": "day",
+      "publisher": "Madrigal Pharmaceuticals",
+      "type": "company_announcement",
+      "url": "https://ir.madrigalpharma.com/node/14516/pdf",
+      "title": "MAESTRO-NASH week 52",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn600846458view4",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "MDGL_P2": {
+      "id": "MDGL_P2",
+      "document_date": "2018-05-31",
+      "public_availability_date": "2018-05-31",
+      "date_precision": "day",
+      "publisher": "Madrigal Pharmaceuticals",
+      "type": "company_announcement",
+      "url": "https://ir.madrigalpharma.com/news-releases/news-release-details/madrigals-mgl-3196-achieves-liver-biopsy-endpoints-patients-non",
+      "title": "MGL-3196 phase 2 week 36",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn828674283view1",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "VKTX_VENTURE": {
+      "id": "VKTX_VENTURE",
+      "document_date": "2024-02-27",
+      "public_availability_date": "2024-02-27",
+      "date_precision": "day",
+      "publisher": "Viking Therapeutics",
+      "type": "company_announcement",
+      "url": "https://ir.vikingtherapeutics.com/2024-02-27-Viking-Therapeutics-Announces-Positive-Top-Line-Results-from-Phase-2-VENTURE-Trial-of-Dual-GLP-1-GIP-Receptor-Agonist-VK2735-in-Patients-with-Obesity",
+      "title": "VENTURE phase 2",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn903499161view3",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "VKTX_P1": {
+      "id": "VKTX_P1",
+      "document_date": "2023-03-28",
+      "public_availability_date": "2023-03-28",
+      "date_precision": "day",
+      "publisher": "Viking Therapeutics",
+      "type": "company_announcement",
+      "url": "https://ir.vikingtherapeutics.com/2023-03-28-Viking-Therapeutics-Announces-Results-from-Phase-1-Clinical-Trial-of-Dual-GLP-1-GIP-Receptor-Agonist-VK2735",
+      "title": "VK2735 injectable SAD/MAD",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn828674283view0",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "SLRN_B": {
+      "id": "SLRN_B",
+      "document_date": "2023-09-11",
+      "public_availability_date": "2023-09-11",
+      "date_precision": "day",
+      "publisher": "Acelyrin",
+      "type": "company_announcement",
+      "url": "https://www.globenewswire.com/news-release/2023/09/11/2741149/0/en/ACELYRIN-INC-Announces-Top-Line-Results-from-Placebo-Controlled-Clinical-Trial-of-Izokibep-for-Moderate-to-Severe-Hidradenitis-Suppurativa.html",
+      "title": "Izokibep phase 2b/3 Part B",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn600846458view5",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "SLRN_A": {
+      "id": "SLRN_A",
+      "document_date": "2023-03-18",
+      "public_availability_date": "2023-03-18",
+      "date_precision": "day",
+      "publisher": "Acelyrin",
+      "type": "company_announcement",
+      "url": "https://www.prnewswire.com/news-releases/acelyrin-inc-announces-izokibep-achieves-hiscr100-responses-at-12-weeks-in-moderate-to-severe-hidradenitis-suppurativa-301775533.html",
+      "title": "Izokibep open-label Part A",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn464453301view0",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "ICPT_REGENERATE": {
+      "id": "ICPT_REGENERATE",
+      "document_date": "2019-02-19",
+      "public_availability_date": "2019-02-19",
+      "date_precision": "day",
+      "publisher": "Intercept Pharmaceuticals",
+      "type": "company_announcement",
+      "url": "https://www.globenewswire.com/news-release/2019/02/19/1734111/0/en/Intercept-Announces-Positive-Topline-Results-from-Pivotal-Phase-3-REGENERATE-Study-of-Obeticholic-Acid-in-Patients-with-Liver-Fibrosis-Due-to-NASH.html",
+      "title": "REGENERATE 18-month interim",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn600846458view6",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "ICPT_FLINT": {
+      "id": "ICPT_FLINT",
+      "document_date": "2014-11-07",
+      "public_availability_date": "2014-11-07",
+      "date_precision": "day",
+      "publisher": "Neuschwander-Tetri et al., Lancet",
+      "type": "primary_research",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25468160/",
+      "title": "FLINT randomized trial",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn464453301view2",
+      "access": "abstract_and_publication_metadata",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "publication_metadata",
+      "historical_snapshot_verified": false
+    },
+    "SNY_P3": {
+      "id": "SNY_P3",
+      "document_date": "2024-09-02",
+      "public_availability_date": "2024-09-02",
+      "date_precision": "day",
+      "publisher": "Sanofi",
+      "type": "company_announcement",
+      "url": "https://www.sanofi.com/en/media-room/press-releases/2024/2024-09-02-05-00-00-2938875",
+      "title": "HERCULES and GEMINI 1/2",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn903499161view1",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "SNY_P2": {
+      "id": "SNY_P2",
+      "document_date": "2020-04-23",
+      "public_availability_date": "2020-04-23",
+      "date_precision": "day",
+      "publisher": "Sanofi",
+      "type": "company_announcement",
+      "url": "https://www.sanofi.com/en/media-room/press-releases/2020/2020-04-23-05-00-00-2020541",
+      "title": "SAR442168 phase 2b",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn464453301view1",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "ABBV_T1": {
+      "id": "ABBV_T1",
+      "document_date": "2024-09-26",
+      "public_availability_date": "2024-09-26",
+      "date_precision": "day",
+      "publisher": "AbbVie",
+      "type": "company_announcement",
+      "url": "https://news.abbvie.com/2024-09-26-AbbVie-Announces-Positive-Topline-Results-from-Phase-3-TEMPO-1-Trial-Evaluating-Tavapadon-as-a-Monotherapy-for-Parkinsons-Disease?sf274780218=1",
+      "title": "TEMPO-1",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn903499161view2",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    },
+    "CERE_T3": {
+      "id": "CERE_T3",
+      "document_date": "2024-04-18",
+      "public_availability_date": "2024-04-18",
+      "date_precision": "day",
+      "publisher": "Cerevel Therapeutics",
+      "type": "company_announcement",
+      "url": "https://news.abbvie.com/2024-04-18-Cerevel-Therapeutics-Announces-Positive-Topline-Results-for-Tavapadon-in-Phase-3-Adjunctive-Trial-for-People-Living-with-Parkinsons-Disease",
+      "title": "TEMPO-3",
+      "retrieved_on": "2026-11-25",
+      "web_reference": "turn464453301view5",
+      "access": "full_announcement",
+      "raw_document_archived": false,
+      "source_confidence": "primary_document_read",
+      "publication_date_is_original_first_disclosure": false,
+      "availability_basis": "dated_press_release_retrieved_today",
+      "historical_snapshot_verified": false
+    }
+  },
+  "prior_observations": [
+    {
+      "id": "PTX_PRIOR_2023",
+      "family": "PTX100",
+      "trial": "PTX-100 phase 1b",
+      "source_id": "PTX_2023",
+      "document_date": "2023-12-11",
+      "signal": "exploratory_positive",
+      "design": "dose_escalation_uncontrolled",
+      "summary": "Parmi 9 patients TCL évaluables, 4 réponses. Sous-groupe CTCL de 5 patients, 2 réponses. Signal exploratoire, populations PTCL et CTCL distinctes.",
+      "n": 9,
+      "limitations": [
+        "petit effectif",
+        "absence de contrôle",
+        "données préliminaires",
+        "ne pas extrapoler le TCL global au CTCL"
+      ],
+      "cohort_group": "PTX100-P1B",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "efficacy_evaluable",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "ORR",
+          "population": "all_TCL_evaluable",
+          "numerator": 4,
+          "denominator": 9
+        },
+        {
+          "measure": "ORR",
+          "population": "CTCL_evaluable",
+          "numerator": 2,
+          "denominator": 5
+        }
+      ]
+    },
+    {
+      "id": "PTX_PRIOR_2026",
+      "family": "PTX100",
+      "trial": "PTX-100 phase 1b CTCL subanalysis",
+      "source_id": "PTX_2026",
+      "document_date": "2026-02-24",
+      "signal": "exploratory_positive",
+      "design": "uncontrolled_subgroup",
+      "summary": "Rapport décrivant 7 patients CTCL évaluables, ORR 43 %, bénéfice clinique 100 %, durée moyenne de réponse 12,4 mois.",
+      "n": 7,
+      "limitations": [
+        "réanalyse du même essai, pas une réplication indépendante",
+        "petit sous-groupe",
+        "date de publication publique à confirmer"
+      ],
+      "cohort_group": "PTX100-P1B",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "efficacy_evaluable",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "ORR",
+          "value": 43,
+          "unit": "percent",
+          "population": "CTCL_evaluable",
+          "denominator": 7
+        },
+        {
+          "measure": "mean_duration_of_response",
+          "value": 12.4,
+          "unit": "months"
+        }
+      ]
+    },
+    {
+      "id": "AMLX_PRIOR",
+      "family": "AMX0035",
+      "trial": "CENTAUR",
+      "source_id": "AMLX_CENTAUR",
+      "document_date": "2020-12-09",
+      "signal": "controlled_positive",
+      "design": "randomized_double_blind_placebo",
+      "summary": "Essai de 137 participants avec critère ALSFRS-R favorable sur 24 semaines. Le suivi ouvert et les analyses de survie restent rattachés au même essai.",
+      "n": 137,
+      "limitations": [
+        "une étude contrôlée",
+        "extension non indépendante",
+        "suivi de 24 semaines différent de PHOENIX"
+      ],
+      "cohort_group": "AMX0035-CENTAUR",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "reported_population",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "functional_decline_ALSFRSR",
+          "direction": "favors_treatment",
+          "follow_up_weeks": 24,
+          "p_value": null
+        }
+      ]
+    },
+    {
+      "id": "ATHA_PRIOR",
+      "family": "FOSGONIMETON",
+      "trial": "ACT-AD",
+      "source_id": "ATHA_ACT",
+      "document_date": "2022-08-15",
+      "signal": "primary_negative_posthoc_signal",
+      "design": "randomized_double_blind_placebo",
+      "summary": "Critère ERP P300 non atteint. Analyse post hoc sans AChEI suggérant un effet cognitif, sans démonstration confirmatoire.",
+      "n": null,
+      "limitations": [
+        "analyse post hoc",
+        "signal non significatif",
+        "population et critère modifiés pour étude suivante"
+      ],
+      "cohort_group": "FOSGONIMETON-ACT-AD",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "not_extracted",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "ERP_P300_primary",
+          "significance": "not_significant",
+          "follow_up_weeks": 26
+        },
+        {
+          "measure": "ADAS_Cog_posthoc",
+          "difference": -3.3,
+          "unit": "points",
+          "analysis": "post_hoc_no_AChEI"
+        }
+      ]
+    },
+    {
+      "id": "SAVA_PRIOR_OL",
+      "family": "SIMUFILAM",
+      "trial": "Open-label 12-month",
+      "source_id": "SAVA_OL",
+      "document_date": "2023-01-24",
+      "signal": "exploratory_uncontrolled",
+      "design": "open_label_no_concurrent_control",
+      "summary": "Étude de sécurité ouverte, plus de 200 inscrits. ADAS-Cog11 moyen de 19,1 à 19,6 à un an. Amélioration mise en avant dans le sous-groupe léger.",
+      "n": null,
+      "limitations": [
+        "absence de contrôle contemporain",
+        "sous-groupes",
+        "pas une preuve confirmatoire d'efficacité"
+      ],
+      "cohort_group": "SIMUFILAM-PTI12504",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "not_extracted",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "ADAS_Cog11",
+          "baseline": 19.1,
+          "followup": 19.6,
+          "follow_up_months": 12,
+          "comparator": "none"
+        }
+      ]
+    },
+    {
+      "id": "SAVA_PRIOR_CMS",
+      "family": "SIMUFILAM",
+      "trial": "CMS",
+      "source_id": "SAVA_CMS",
+      "document_date": "2023-07-05",
+      "signal": "controlled_inconclusive",
+      "design": "randomized_withdrawal_after_open_label",
+      "summary": "157 randomisés après traitement ouvert. Écart ADAS-Cog de -0,6 point, IC95 % [-2,1;1,0], non significatif malgré une présentation relative de 38 %.",
+      "n": 157,
+      "limitations": [
+        "sélection après phase ouverte",
+        "intervalle compatible avec absence de bénéfice",
+        "cohorte dépendante de l'étude ouverte"
+      ],
+      "cohort_group": "SIMUFILAM-PTI12504",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "reported_population",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "ADAS_Cog11_change_difference",
+          "value": -0.6,
+          "unit": "points",
+          "ci95": [
+            -2.1,
+            1
+          ],
+          "follow_up_months": 6,
+          "significance": "not_significant"
+        }
+      ]
+    },
+    {
+      "id": "KRTX_PRIOR_E1",
+      "family": "KARXT",
+      "trial": "EMERGENT-1",
+      "source_id": "KRTX_E1",
+      "document_date": "2020-03-24",
+      "signal": "controlled_positive",
+      "design": "placebo_controlled",
+      "summary": "Compte rendu de mars 2020 des résultats annoncés en novembre 2019. Écart PANSS de 11,6 points, p<0,0001.",
+      "n": null,
+      "limitations": [
+        "première étude positive",
+        "rapport rétrospectif antérieur au résultat cible"
+      ],
+      "cohort_group": "KARXT-EMERGENT1",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "not_extracted",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "PANSS_placebo_adjusted_improvement",
+          "value": 11.6,
+          "unit": "points",
+          "follow_up_weeks": 5,
+          "p_value": {
+            "operator": "<",
+            "value": 0.0001
+          }
+        }
+      ]
+    },
+    {
+      "id": "KRTX_PRIOR_E2",
+      "family": "KARXT",
+      "trial": "EMERGENT-2",
+      "source_id": "KRTX_E2",
+      "document_date": "2022-08-08",
+      "signal": "controlled_positive",
+      "design": "double_blind_placebo",
+      "summary": "Écart PANSS de 9,6 points à cinq semaines, p<0,0001. Deuxième étude positive après EMERGENT-1.",
+      "n": null,
+      "limitations": [
+        "même promoteur",
+        "utilisable pour EMERGENT-3 seulement après le 08/08/2022"
+      ],
+      "cohort_group": "KARXT-EMERGENT2",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "not_extracted",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "PANSS_placebo_adjusted_improvement",
+          "value": 9.6,
+          "unit": "points",
+          "follow_up_weeks": 5,
+          "p_value": {
+            "operator": "<",
+            "value": 0.0001
+          }
+        }
+      ]
+    },
+    {
+      "id": "CERE_PRIOR",
+      "family": "EMRACLIDINE",
+      "trial": "CVL-231 phase 1b",
+      "source_id": "CERE_P1B",
+      "document_date": "2021-06-29",
+      "signal": "exploratory_controlled_positive",
+      "design": "placebo_controlled_early_phase",
+      "summary": "81 participants dans la partie B. Écarts PANSS de 12,7 et 11,1 points à six semaines, p=0,023 et 0,047.",
+      "n": 81,
+      "limitations": [
+        "petit essai précoce",
+        "activité antipsychotique exploratoire",
+        "réplication de phase 2 encore absente"
+      ],
+      "cohort_group": "EMRACLIDINE-CVL-231 phase 1b",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "reported_population",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "PANSS_placebo_adjusted_improvement",
+          "dose": "30 mg QD",
+          "value": 12.7,
+          "p_value": 0.023,
+          "follow_up_weeks": 6
+        },
+        {
+          "measure": "PANSS_placebo_adjusted_improvement",
+          "dose": "20 mg BID",
+          "value": 11.1,
+          "p_value": 0.047,
+          "follow_up_weeks": 6
+        }
+      ]
+    },
+    {
+      "id": "APLS_PRIOR",
+      "family": "PEGCETACOPLAN_GA",
+      "trial": "FILLY",
+      "source_id": "APLS_FILLY",
+      "document_date": "2019-07-16",
+      "signal": "controlled_positive_dose_dependent",
+      "design": "randomized_single_masked_sham",
+      "summary": "246 patients. Réduction de croissance des lésions de 29 % en mensuel, p=0,008, et 20 % tous les deux mois, p=0,067.",
+      "n": 246,
+      "limitations": [
+        "critère anatomique",
+        "seuil statistique et multiplicité à documenter",
+        "effets oculaires indésirables rapportés"
+      ],
+      "cohort_group": "PEGCETACOPLAN_GA-FILLY",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "reported_population",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "GA_growth_relative_reduction",
+          "dose": "monthly",
+          "value": 29,
+          "unit": "percent",
+          "p_value": 0.008,
+          "follow_up_months": 12
+        },
+        {
+          "measure": "GA_growth_relative_reduction",
+          "dose": "every_other_month",
+          "value": 20,
+          "unit": "percent",
+          "p_value": 0.067,
+          "follow_up_months": 12
+        }
+      ]
+    },
+    {
+      "id": "AXSM_PRIOR_ADV",
+      "family": "AXS05_AGITATION",
+      "trial": "ADVANCE-1",
+      "source_id": "AXSM_ADV1",
+      "document_date": "2020-04-27",
+      "signal": "controlled_positive",
+      "design": "randomized_double_blind_parallel_placebo_and_active",
+      "summary": "366 randomisés, diminution CMAI de 15,4 contre 11,5 points sous placebo à cinq semaines, p=0,010.",
+      "n": 366,
+      "limitations": [
+        "essai court",
+        "comparaison active et placebo",
+        "design différent du retrait randomisé"
+      ],
+      "cohort_group": "AXS05-ADVANCE1",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "reported_population",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "CMAI_reduction",
+          "treatment": 15.4,
+          "placebo": 11.5,
+          "unit": "points",
+          "p_value": 0.01,
+          "follow_up_weeks": 5
+        }
+      ]
+    },
+    {
+      "id": "AXSM_PRIOR_ACC",
+      "family": "AXS05_AGITATION",
+      "trial": "ACCORD-1",
+      "source_id": "AXSM_ACC1",
+      "document_date": "2022-11-28",
+      "signal": "controlled_positive",
+      "design": "randomized_withdrawal_enriched_responders",
+      "summary": "108 répondeurs randomisés après traitement ouvert. Allongement du délai de rechute, HR=0,275, p=0,014.",
+      "n": 108,
+      "limitations": [
+        "population enrichie en répondeurs",
+        "évalue le maintien plutôt que la réponse initiale"
+      ],
+      "cohort_group": "AXS05-ACCORD1",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "reported_population",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "time_to_relapse",
+          "hazard_ratio": 0.275,
+          "p_value": 0.014
+        }
+      ]
+    },
+    {
+      "id": "MDGL_PRIOR",
+      "family": "RESMETIROM",
+      "trial": "MGL-3196 phase 2",
+      "source_id": "MDGL_P2",
+      "document_date": "2018-05-31",
+      "signal": "controlled_positive",
+      "design": "placebo_controlled",
+      "summary": "Signal favorable sur graisse hépatique à douze semaines puis histologie à 36 semaines. Résolution NASH de 27 % contre 6 % dans l'analyse des biopsies.",
+      "n": 107,
+      "limitations": [
+        "107 avec biopsies analysables, pas effectif total randomisé",
+        "critère principal initial IRM",
+        "les lectures répétées du même essai ne sont pas indépendantes"
+      ],
+      "cohort_group": "RESMETIROM-MGL-3196 phase 2",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "paired_biopsies",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "NASH_resolution",
+          "treatment": 27,
+          "placebo": 6,
+          "unit": "percent",
+          "follow_up_weeks": 36,
+          "p_value": 0.02,
+          "population": "paired_biopsies"
+        }
+      ]
+    },
+    {
+      "id": "VKTX_PRIOR",
+      "family": "VK2735_SC",
+      "trial": "SAD/MAD injectable phase 1",
+      "source_id": "VKTX_P1",
+      "document_date": "2023-03-28",
+      "signal": "exploratory_controlled_positive",
+      "design": "randomized_double_blind_placebo",
+      "summary": "À 28 jours, perte de poids ajustée du placebo jusqu'à 6 %. Phase 1 centrée sur sécurité et doses, bénéfice pondéral exploratoire.",
+      "n": 41,
+      "limitations": [
+        "41 dans les cohortes MAD du tableau, pas essai SAD+MAD complet",
+        "durée courte",
+        "faible nombre par dose"
+      ],
+      "cohort_group": "VK2735_SC-SAD/MAD injectable phase 1",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "MAD_table_participants",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "max_placebo_adjusted_weight_loss",
+          "value": 6,
+          "unit": "percent",
+          "follow_up_days": 28,
+          "role": "exploratory"
+        }
+      ]
+    },
+    {
+      "id": "SLRN_PRIOR",
+      "family": "IZOKIBEP_HS",
+      "trial": "Part A open-label",
+      "source_id": "SLRN_A",
+      "document_date": "2023-03-18",
+      "signal": "exploratory_positive",
+      "design": "open_label_no_concurrent_control",
+      "summary": "À douze semaines, HiSCR100 rapporté chez 33 % des participants.",
+      "n": null,
+      "limitations": [
+        "pas de comparateur",
+        "Part A du même protocole que Part B",
+        "petit groupe",
+        "effectif non extrait dans ce lot"
+      ],
+      "cohort_group": "IZOKIBEP-HS-P2B3",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "not_extracted",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "HiSCR100",
+          "value": 33,
+          "unit": "percent",
+          "follow_up_weeks": 12,
+          "comparator": "none"
+        }
+      ]
+    },
+    {
+      "id": "ICPT_PRIOR",
+      "family": "OBETICHOLIC_NASH",
+      "trial": "FLINT",
+      "source_id": "ICPT_FLINT",
+      "document_date": "2014-11-07",
+      "signal": "controlled_positive",
+      "design": "randomized_double_blind_placebo",
+      "summary": "283 randomisés. Amélioration histologique chez 45 % contre 21 % des patients devant avoir les biopsies, p=0,0002.",
+      "n": 283,
+      "limitations": [
+        "analyse intermédiaire et arrêt anticipé partiel",
+        "prurit plus fréquent",
+        "bénéfice clinique à long terme non établi"
+      ],
+      "cohort_group": "OBETICHOLIC_NASH-FLINT",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "reported_population",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "histology_improvement",
+          "treatment": 45,
+          "placebo": 21,
+          "unit": "percent",
+          "p_value": 0.0002,
+          "follow_up_weeks": 72
+        }
+      ]
+    },
+    {
+      "id": "SNY_PRIOR",
+      "family": "TOLEBRUTINIB",
+      "trial": "SAR442168 phase 2b",
+      "source_id": "SNY_P2",
+      "document_date": "2020-04-23",
+      "signal": "controlled_positive_surrogate",
+      "design": "dose_response_placebo",
+      "summary": "Réduction des lésions IRM après douze semaines. Effet de dose sur lésions Gd+, p=0,03, baisse relative rapportée de 85 % à 60 mg.",
+      "n": null,
+      "limitations": [
+        "critère IRM",
+        "ne démontre pas une réduction du handicap",
+        "pas la population nrSPMS",
+        "comparateur actif des GEMINI différent"
+      ],
+      "cohort_group": "TOLEBRUTINIB-SAR442168 phase 2b",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "not_extracted",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "Gd_enhancing_lesion_dose_response",
+          "p_value": 0.03,
+          "follow_up_weeks": 12
+        },
+        {
+          "measure": "Gd_lesion_relative_reduction_at_60mg",
+          "value": 85,
+          "unit": "percent",
+          "role": "surrogate"
+        }
+      ]
+    },
+    {
+      "id": "TAVA_PRIOR",
+      "family": "TAVAPADON",
+      "trial": "TEMPO-3",
+      "source_id": "CERE_T3",
+      "document_date": "2024-04-18",
+      "signal": "controlled_positive_adjunctive",
+      "design": "randomized_double_blind_placebo_adjunctive",
+      "summary": "Gain de temps on sans dyskinésie gênante de 1,1 heure par rapport au placebo, p<0,0001.",
+      "n": null,
+      "limitations": [
+        "traitement ajouté à lévodopa",
+        "population avancée différente de TEMPO-1 précoce",
+        "critère différent"
+      ],
+      "cohort_group": "TAVAPADON-TEMPO-3",
+      "annotation_status": "reviewed_documentary",
+      "input_provenance": "earlier_dated_primary_document",
+      "n_basis": "not_extracted",
+      "full_protocol_verified": false,
+      "measurements": [
+        {
+          "measure": "on_time_without_troublesome_dyskinesia_difference",
+          "value": 1.1,
+          "unit": "hours",
+          "p_value": {
+            "operator": "<",
+            "value": 0.0001
+          },
+          "setting": "adjunct_to_levodopa"
+        }
+      ]
+    }
+  ],
+  "readouts": [
+    {
+      "id": "PTX100-P2A-20261125",
+      "family_group": "PTX100",
+      "company_at_event": "Prescient Therapeutics",
+      "trial": {
+        "name": "PTX-100-02-2024",
+        "nct": null,
+        "phase": "2a"
+      },
+      "event": {
+        "date": "2026-11-25",
+        "date_precision": "day",
+        "type": "interim_dose_review",
+        "source_id": "PTX_D24"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "two_dose_cohorts",
+        "n_reported": 20,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [
+          "PTX_PRIOR_2026"
+        ],
+        "n_basis": "efficacy_evaluable"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "PTX_PRIOR_2023"
+        ],
+        "prior_signal_state": "exploratory_positive_unreplicated",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "pending",
+        "clinical_signal": "mixed",
+        "endpoint": "Sélection de dose après première revue du comité",
+        "result_summary": "20 évaluables efficacité, 2 réponses complètes, 12 stabilités, 6 progressions. Données jugées insuffisantes pour choisir une dose.",
+        "development_decision_at_event": "Recrutement poursuivi; revue du programme.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "no_final_label",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_yet_conclusive",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "données préliminaires non entièrement vérifiées",
+          "29 évaluables sécurité distincts des 20 efficacité",
+          "pas de conclusion finale de phase 2",
+          "date publique du rapport antérieur 2026 non prouvée"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": false,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "interim_signal_only_final_binary_target_excluded",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "PTX100"
+    },
+    {
+      "id": "AMX0035-PHOENIX-20240308",
+      "family_group": "AMX0035",
+      "company_at_event": "Amylyx Pharmaceuticals",
+      "trial": {
+        "name": "PHOENIX",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2024-03-08",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "AMLX_PHOENIX"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_placebo_controlled",
+        "n_reported": 664,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "AMLX_PRIOR"
+        ],
+        "prior_signal_state": "single_controlled_positive",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "ALSFRS-R à 48 semaines",
+        "result_summary": "p=0,667; critères secondaires sans différence significative.",
+        "development_decision_at_event": "Promotion suspendue; discussion réglementaire annoncée, retrait seulement envisagé à cette date.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "aucune décision ultérieure intégrée à l'état du 08/03/2024"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "AMX0035"
+    },
+    {
+      "id": "FOSGONIMETON-LIFT-20240903",
+      "family_group": "FOSGONIMETON",
+      "company_at_event": "Athira Pharma",
+      "trial": {
+        "name": "LIFT-AD",
+        "nct": "NCT04488419",
+        "phase": "2/3"
+      },
+      "event": {
+        "date": "2024-09-03",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "ATHA_LIFT"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_placebo",
+        "n_reported": 312,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "ATHA_PRIOR"
+        ],
+        "prior_signal_state": "primary_negative_posthoc_signal",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "GST cognition et fonction à 26 semaines",
+        "result_summary": "GST p=0,70; cognition et fonction non significatives. Signaux de sous-groupes et biomarqueurs conservés comme exploratoires.",
+        "development_decision_at_event": "Analyse des données annoncée.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "plan complet de multiplicité non extrait",
+          "résultats de sous-groupes non transformés en succès global"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "FOSGONIMETON"
+    },
+    {
+      "id": "SIMUFILAM-RETHINK-20241125",
+      "family_group": "SIMUFILAM",
+      "company_at_event": "Cassava Sciences",
+      "trial": {
+        "name": "ReThink-ALZ",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2024-11-25",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "SAVA_RETHINK"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_placebo",
+        "n_reported": 804,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "SAVA_PRIOR_OL",
+          "SAVA_PRIOR_CMS"
+        ],
+        "prior_signal_state": "uncontrolled_signal_controlled_confirmation_inconclusive",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "ADAS-Cog12 et ADCS-ADL à 52 semaines",
+        "result_summary": "Co-critères non atteints, p=0,43 et 0,40.",
+        "development_decision_at_event": "Arrêt de ReFocus-ALZ et de l'extension ouverte annoncé.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "données d'études interrompues non imputées comme échecs statistiques supplémentaires"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "SIMUFILAM"
+    },
+    {
+      "id": "KARXT-E2-20220808",
+      "family_group": "KARXT",
+      "company_at_event": "Karuna Therapeutics",
+      "trial": {
+        "name": "EMERGENT-2",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2022-08-08",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "KRTX_E2"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "double_blind_placebo",
+        "n_reported": null,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "not_extracted"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "KRTX_PRIOR_E1"
+        ],
+        "prior_signal_state": "single_controlled_positive",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "PANSS total à cinq semaines",
+        "result_summary": "Écart de 9,6 points versus placebo, p<0,0001.",
+        "development_decision_at_event": "Développement et préparation du dossier poursuivis.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "effectif non extrait dans ce lot"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "KARXT"
+    },
+    {
+      "id": "KARXT-E3-20230320",
+      "family_group": "KARXT",
+      "company_at_event": "Karuna Therapeutics",
+      "trial": {
+        "name": "EMERGENT-3",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2023-03-20",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "KRTX_E3"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "double_blind_placebo",
+        "n_reported": null,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "not_extracted"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "KRTX_PRIOR_E1",
+          "KRTX_PRIOR_E2"
+        ],
+        "prior_signal_state": "replicated_controlled_positive",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "PANSS total à cinq semaines",
+        "result_summary": "Écart de 8,4 points versus placebo, p<0,0001.",
+        "development_decision_at_event": "Dépôt NDA annoncé pour mi-2023.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "certaines mesures de symptômes négatifs non significatives à semaine 5",
+          "effectif non extrait dans ce lot"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "KARXT"
+    },
+    {
+      "id": "EMRACLIDINE-EMPOWER-1-20241111",
+      "family_group": "EMRACLIDINE",
+      "company_at_event": "AbbVie",
+      "trial": {
+        "name": "EMPOWER-1",
+        "nct": "NCT05227690",
+        "phase": "2"
+      },
+      "event": {
+        "date": "2024-11-11",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "ABBV_EM"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_placebo",
+        "n_reported": 379,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "CERE_PRIOR"
+        ],
+        "prior_signal_state": "exploratory_controlled_positive_unreplicated",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "PANSS total à six semaines",
+        "result_summary": "Amélioration versus placebo non significative au critère principal.",
+        "development_decision_at_event": "Analyse des résultats pour déterminer la suite.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "effectif calculé par somme des bras du tableau",
+          "les deux études sont publiées simultanément et ne se prédisent pas mutuellement"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "EMRACLIDINE"
+    },
+    {
+      "id": "EMRACLIDINE-EMPOWER-2-20241111",
+      "family_group": "EMRACLIDINE",
+      "company_at_event": "AbbVie",
+      "trial": {
+        "name": "EMPOWER-2",
+        "nct": "NCT05227703",
+        "phase": "2"
+      },
+      "event": {
+        "date": "2024-11-11",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "ABBV_EM"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_placebo",
+        "n_reported": 373,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "CERE_PRIOR"
+        ],
+        "prior_signal_state": "exploratory_controlled_positive_unreplicated",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "PANSS total à six semaines",
+        "result_summary": "Amélioration versus placebo non significative au critère principal.",
+        "development_decision_at_event": "Analyse des résultats pour déterminer la suite.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "effectif calculé par somme des bras du tableau",
+          "les deux études sont publiées simultanément et ne se prédisent pas mutuellement"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "EMRACLIDINE"
+    },
+    {
+      "id": "PEGCETACOPLAN-OAKS-20210909",
+      "family_group": "PEGCETACOPLAN_GA",
+      "company_at_event": "Apellis Pharmaceuticals",
+      "trial": {
+        "name": "OAKS",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2021-09-09",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "APLS_OAKS_DERBY"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_masked_sham",
+        "n_reported": 637,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "APLS_PRIOR"
+        ],
+        "prior_signal_state": "single_controlled_positive_dose_dependent",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "Croissance des lésions GA à douze mois",
+        "result_summary": "Réduction mensuelle de 22 %, p=0,0003; tous les deux mois 16 %, p=0,0052.",
+        "development_decision_at_event": "Poursuite du suivi et projet de dépôt.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "résultat DERBY simultané, exclu des entrées",
+          "pas de label d'amélioration de vision"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "PEGCETACOPLAN"
+    },
+    {
+      "id": "PEGCETACOPLAN-DERBY-20210909",
+      "family_group": "PEGCETACOPLAN_GA",
+      "company_at_event": "Apellis Pharmaceuticals",
+      "trial": {
+        "name": "DERBY",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2021-09-09",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "APLS_OAKS_DERBY"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_masked_sham",
+        "n_reported": 621,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "APLS_PRIOR"
+        ],
+        "prior_signal_state": "single_controlled_positive_dose_dependent",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "Croissance des lésions GA à douze mois",
+        "result_summary": "Réduction mensuelle de 12 %, p=0,0528; tous les deux mois 11 %, p=0,0750.",
+        "development_decision_at_event": "Poursuite du suivi et projet de dépôt pour le programme.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "résultat OAKS simultané, exclu des entrées",
+          "ne pas substituer une analyse ultérieure à celle de douze mois"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "PEGCETACOPLAN"
+    },
+    {
+      "id": "AXS05-ADV2-20241230",
+      "family_group": "AXS05_AGITATION",
+      "company_at_event": "Axsome Therapeutics",
+      "trial": {
+        "name": "ADVANCE-2",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2024-12-30",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "AXSM_2024"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_parallel_placebo",
+        "n_reported": 408,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "AXSM_PRIOR_ADV",
+          "AXSM_PRIOR_ACC"
+        ],
+        "prior_signal_state": "positive_across_distinct_designs",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "CMAI à cinq semaines",
+        "result_summary": "Diminution CMAI de 13,8 contre 12,6 points, sans significativité.",
+        "development_decision_at_event": "Projet NDA maintenu sur l'ensemble du programme.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "ACCORD-2 annoncé simultanément, exclu des entrées"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "AXS05"
+    },
+    {
+      "id": "AXS05-ACC2-20241230",
+      "family_group": "AXS05_AGITATION",
+      "company_at_event": "Axsome Therapeutics",
+      "trial": {
+        "name": "ACCORD-2",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2024-12-30",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "AXSM_2024"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "double_blind_randomized_withdrawal_enriched_responders",
+        "n_reported": 167,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_after_open_label"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "AXSM_PRIOR_ADV",
+          "AXSM_PRIOR_ACC"
+        ],
+        "prior_signal_state": "positive_across_distinct_designs",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "Délai avant rechute après réponse ouverte",
+        "result_summary": "HR=0,276, p=0,001.",
+        "development_decision_at_event": "Projet NDA maintenu.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "295 traités en ouvert distincts des 167 randomisés",
+          "ADVANCE-2 simultané exclu des entrées"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "AXS05"
+    },
+    {
+      "id": "MDGL-MAESTRO-20221219",
+      "family_group": "RESMETIROM",
+      "company_at_event": "Madrigal Pharmaceuticals",
+      "trial": {
+        "name": "MAESTRO-NASH week 52",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2022-12-19",
+        "date_precision": "day",
+        "type": "prespecified_histology_readout",
+        "source_id": "MDGL_P3"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_placebo",
+        "n_reported": 966,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "primary_analysis_randomized"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "MDGL_PRIOR"
+        ],
+        "prior_signal_state": "controlled_positive_surrogate_and_histology",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "Résolution NASH et amélioration fibrose à 52 semaines",
+        "result_summary": "Deux critères histologiques atteints aux doses de 80 et 100 mg.",
+        "development_decision_at_event": "Dépôt en vue d'approbation accélérée prévu.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "966 randomisés dans la population d'analyse, distincts des effectifs globaux",
+          "bénéfice sur événements cliniques à long terme non conclu"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "RESMETIROM"
+    },
+    {
+      "id": "VK2735-VENTURE-20240227",
+      "family_group": "VK2735_SC",
+      "company_at_event": "Viking Therapeutics",
+      "trial": {
+        "name": "VENTURE",
+        "nct": null,
+        "phase": "2"
+      },
+      "event": {
+        "date": "2024-02-27",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "VKTX_VENTURE"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_placebo",
+        "n_reported": 176,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "VKTX_PRIOR"
+        ],
+        "prior_signal_state": "exploratory_controlled_positive_short_followup",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "Variation pondérale à treize semaines",
+        "result_summary": "Critère principal et critères secondaires atteints; perte ajustée du placebo jusqu'à 13,1 %.",
+        "development_decision_at_event": "Discussion FDA et poursuite du développement annoncées.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "suivi court",
+          "cas grave de déshydratation lié au traitement rapporté",
+          "formulation injectable distincte de l'orale"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "VK2735"
+    },
+    {
+      "id": "IZOKIBEP-HS-B-20230911",
+      "family_group": "IZOKIBEP_HS",
+      "company_at_event": "Acelyrin",
+      "trial": {
+        "name": "Izokibep HS Part B",
+        "nct": null,
+        "phase": "2b/3"
+      },
+      "event": {
+        "date": "2023-09-11",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "SLRN_B"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_placebo",
+        "n_reported": 175,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "SLRN_PRIOR"
+        ],
+        "prior_signal_state": "exploratory_uncontrolled_positive",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "mixed",
+        "endpoint": "HiSCR75 à seize semaines, analyse NRI",
+        "result_summary": "Critère principal NRI non significatif; sensibilité LOCF favorable au schéma hebdomadaire.",
+        "development_decision_at_event": "Évaluations du schéma 160 mg hebdomadaire poursuivies.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "résultat principal reste négatif malgré LOCF",
+          "gestion des données manquantes influence l'interprétation",
+          "Part A et B rattachées au même protocole"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "IZOKIBEP_HS"
+    },
+    {
+      "id": "ICPT-REGENERATE-20190219",
+      "family_group": "OBETICHOLIC_NASH",
+      "company_at_event": "Intercept Pharmaceuticals",
+      "trial": {
+        "name": "REGENERATE month 18 interim",
+        "nct": null,
+        "phase": "3"
+      },
+      "event": {
+        "date": "2019-02-19",
+        "date_precision": "day",
+        "type": "prespecified_histology_readout",
+        "source_id": "ICPT_REGENERATE"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_placebo",
+        "n_reported": 931,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "primary_efficacy_population"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "ICPT_PRIOR"
+        ],
+        "prior_signal_state": "single_controlled_positive_histology",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "Au moins un des deux critères histologiques, selon règle annoncée",
+        "result_summary": "Fibrose favorable à 25 mg, p=0,0002. Résolution NASH non significative dans la population principale.",
+        "development_decision_at_event": "Projet de dépôt réglementaire annoncé.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "un seul des deux critères requis selon le communiqué",
+          "analyse intermédiaire histologique",
+          "ne signifie pas approbation réglementaire"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "OBETICHOLIC"
+    },
+    {
+      "id": "TOLE-HERCULES-20240902",
+      "family_group": "TOLEBRUTINIB",
+      "company_at_event": "Sanofi",
+      "trial": {
+        "name": "HERCULES",
+        "nct": "NCT04411641",
+        "phase": "3"
+      },
+      "event": {
+        "date": "2024-09-02",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "SNY_P3"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_placebo",
+        "n_reported": null,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "not_extracted"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "SNY_PRIOR"
+        ],
+        "prior_signal_state": "controlled_surrogate_positive_population_extrapolation",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "Délai avant progression confirmée du handicap en nrSPMS",
+        "result_summary": "Critère principal atteint versus placebo.",
+        "development_decision_at_event": "Discussion réglementaire annoncée.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "effectif et taille d'effet non fournis dans ce premier communiqué",
+          "signal IRM antérieur obtenu en SEP récurrente"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "TOLEBRUTINIB"
+    },
+    {
+      "id": "TOLE-GEMINI1-20240902",
+      "family_group": "TOLEBRUTINIB",
+      "company_at_event": "Sanofi",
+      "trial": {
+        "name": "GEMINI 1",
+        "nct": "NCT04410978",
+        "phase": "3"
+      },
+      "event": {
+        "date": "2024-09-02",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "SNY_P3"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_active_comparator",
+        "n_reported": null,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "not_extracted"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "SNY_PRIOR"
+        ],
+        "prior_signal_state": "controlled_surrogate_positive_clinical_unconfirmed",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "Taux annualisé de poussées versus tériflunomide",
+        "result_summary": "Critère principal non atteint. Signal de handicap seulement dans l'analyse secondaire groupée des deux essais.",
+        "development_decision_at_event": "Évaluation du programme annoncée.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "pooled_GEMINI1_and_2_not_trial_specific"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "effectif et p-value non extraits",
+          "signal secondaire groupé non attribuable à cet essai seul",
+          "HERCULES et autre GEMINI simultanés exclus des entrées"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "TOLEBRUTINIB"
+    },
+    {
+      "id": "TOLE-GEMINI2-20240902",
+      "family_group": "TOLEBRUTINIB",
+      "company_at_event": "Sanofi",
+      "trial": {
+        "name": "GEMINI 2",
+        "nct": "NCT04410991",
+        "phase": "3"
+      },
+      "event": {
+        "date": "2024-09-02",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "SNY_P3"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_active_comparator",
+        "n_reported": null,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "not_extracted"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "SNY_PRIOR"
+        ],
+        "prior_signal_state": "controlled_surrogate_positive_clinical_unconfirmed",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "not_met",
+        "clinical_signal": "negative",
+        "endpoint": "Taux annualisé de poussées versus tériflunomide",
+        "result_summary": "Critère principal non atteint. Signal de handicap seulement dans l'analyse secondaire groupée des deux essais.",
+        "development_decision_at_event": "Évaluation du programme annoncée.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "pooled_GEMINI1_and_2_not_trial_specific"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "not_confirmed_on_current_primary_endpoint",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "effectif et p-value non extraits",
+          "signal secondaire groupé non attribuable à cet essai seul",
+          "HERCULES et autre GEMINI simultanés exclus des entrées"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "TOLEBRUTINIB"
+    },
+    {
+      "id": "TAVA-TEMPO1-20240926",
+      "family_group": "TAVAPADON",
+      "company_at_event": "AbbVie",
+      "trial": {
+        "name": "TEMPO-1",
+        "nct": "NCT04201093",
+        "phase": "3"
+      },
+      "event": {
+        "date": "2024-09-26",
+        "date_precision": "day",
+        "type": "topline_readout",
+        "source_id": "ABBV_T1"
+      },
+      "documentary_context": {
+        "design_reported_at_readout": "randomized_double_blind_placebo_monotherapy",
+        "n_reported": 529,
+        "baseline_design_asof_verified": false,
+        "not_prediction_features": true,
+        "additional_prior_observation_ids": [],
+        "n_basis": "randomized_or_enrolled_as_reported"
+      },
+      "prediction_input_snapshot": {
+        "cutoff_rule": "strictly_before_event_date",
+        "prior_observation_ids": [
+          "TAVA_PRIOR"
+        ],
+        "prior_signal_state": "controlled_positive_different_setting",
+        "prior_signal_state_is_curator_interpretation": true,
+        "prior_history_exhaustive": false,
+        "allowed_input_fields": [
+          "prior_observation_ids",
+          "prior_signal_state"
+        ],
+        "requires_feature_availability_recheck": true,
+        "excluded_fields": [
+          "labels",
+          "documentary_context",
+          "prior_signal_confirmation_after_event",
+          "market_reaction",
+          "development_decision_at_event"
+        ],
+        "source_date_policy": "dated_source_is_earlier_than_event_historical_page_version_not_verified"
+      },
+      "labels": {
+        "primary_endpoint_status": "met",
+        "clinical_signal": "positive",
+        "endpoint": "MDS-UPDRS II+III à 26 semaines",
+        "result_summary": "Amélioration versus placebo aux deux doses, p<0,0001.",
+        "development_decision_at_event": "Présentation et soumission réglementaire prévues.",
+        "regulatory_outcome": null,
+        "market_reaction": null,
+        "endpoint_label_basis": "sponsor_reported_primary_result",
+        "confidence": {
+          "source": "primary_document_read",
+          "primary_label": "direct_explicit_sponsor_statement",
+          "clinical_signal": "curator_categorical_interpretation_not_probability"
+        },
+        "secondary_evidence_scope": "see_result_summary"
+      },
+      "prior_signal_confirmation_after_event": {
+        "value": "supportive_in_current_study_context",
+        "not_prediction_feature": true,
+        "limits": "Interprétation à la coupure de cette annonce; des différences de population, critère ou durée peuvent limiter la comparaison."
+      },
+      "missing_data": {
+        "patient_level_data": "not_collected",
+        "full_preunblinding_protocol_and_SAP": "not_verified",
+        "historical_source_snapshots": "not_archived",
+        "complete_pre_event_design": "not_verified",
+        "market_window_and_confounders": "not_collected",
+        "further_case_specific": [
+          "signal antérieur TEMPO-3 en ajout à lévodopa",
+          "ne pas traiter deux indications ou contextes comme identiques"
+        ]
+      },
+      "inclusion": {
+        "decision": "include_documentary_qualitative",
+        "reason": "Essai et annonce identifiables, source primaire consultée, résultats précédents documentés; informations manquantes conservées.",
+        "strict_dataset_status": "not_reassessed_no_automatic_promotion",
+        "clinical_binary_label_eligible": true,
+        "market_model_eligible": false,
+        "automatic_training_enabled": false,
+        "training_status": "candidate_for_partial_feature_model_after_temporal_validation",
+        "label_definition": "reported_result_at_named_readout_not_ultimate_drug_success"
+      },
+      "overlap_with_previous_zip": "not_checked_previous_zip_unavailable",
+      "reviewed_on": "2026-11-25",
+      "molecule_group": "TAVAPADON"
+    }
+  ],
+  "previous_archive_audit": {
+    "archive_name": "Kinara-corpus-clinique-Capricor-Duchenne.zip",
+    "status": "not_inspected",
+    "reason": "Environnement de fichiers indisponible. Le service de lecture de l'archive ne renvoie aucun contenu textuel.",
+    "can_confirm_incomplete_records_were_retained": false,
+    "can_compute_new_unique_trials": false,
+    "merge_policy": "Conserver le corpus antérieur intact. Faire une fusion par molécule + identifiant d'essai + type de lecture + date; conserver les décisions et motifs existants.",
+    "remaining_tasks": [
+      "ouvrir le dernier ZIP et lire ses journaux",
+      "identifier les recouvrements",
+      "rattacher les nouvelles annotations aux identifiants existants",
+      "archiver les documents sources et instantanés historiques",
+      "compléter les caractéristiques de l'essai cible connues avant chaque annonce",
+      "validation clinique indépendante et évaluation du modèle"
+    ]
+  },
+  "collection_decisions": [
+    {
+      "record_id": "PTX_PRIOR_2026",
+      "decision": "retain_documentary_exclude_prediction_inputs",
+      "reason": "Rapport daté mais date de publication publique non confirmée."
+    },
+    {
+      "record_id": "PTX100-P2A-20261125",
+      "decision": "exclude_final_binary_target_retain_interim_signal",
+      "reason": "Revue intermédiaire de dose; recrutement poursuivi."
+    },
+    {
+      "record_id": "ALL",
+      "decision": "exclude_market_training",
+      "reason": "Fenêtres boursières, cours de référence et annonces concomitantes non collectés dans ce lot."
+    }
+  ],
+  "check_status": "structural_and_temporal_checks_passed_not_clinical_model_validation"
+}
