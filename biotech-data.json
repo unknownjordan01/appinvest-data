@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-26.1",
+  "version": "2026-11-27.1",
   "asOf": "2026-11-14",
   "sources": {
     "t-fin": {
@@ -1354,6 +1354,14 @@
   ],
   "remoteNews": [
     {
+      "slug": "tiziana",
+      "title": "Tiziana Life Sciences Files Updated Foralumab Annual Safety Report with FDA Confirming Favorable Safety and Tolerability Profile",
+      "link": "https://tizianalifesciences.gcs-web.com/news-releases/news-release-details/tiziana-life-sciences-files-updated-foralumab-annual-safety",
+      "date": "2026-11-27T14:00:00Z",
+      "dateRaw": "Fri, 27 Nov 2026 09:00:00 -0500",
+      "retrievedAt": "2026-11-27T23:09:32.335077Z"
+    },
+    {
       "slug": "valneva",
       "title": "Valneva Reports Nine-Month 2026 Financial Results and Provides Corporate Updates",
       "link": "https://valneva.com/press-release/valneva-reports-nine-month-2026-financial-results-and-provides-corporate-updates/",
@@ -1955,8 +1963,8 @@
     }
   ],
   "collection": {
-    "checkedAt": "2026-11-26T23:10:41.494324Z",
-    "added": 0,
+    "checkedAt": "2026-11-27T23:09:32.335077Z",
+    "added": 1,
     "checks": [
       {
         "slug": "atyr",
@@ -1965,8 +1973,8 @@
       },
       {
         "slug": "biocryst",
-        "ok": true,
-        "count": 10
+        "ok": false,
+        "error": "<urlopen error _ssl.c:1063: The handshake operation timed out>"
       },
       {
         "slug": "capricor",
